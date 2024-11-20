@@ -147,7 +147,7 @@
 		
 
 		<span class="post-words"><span class="iconfont icon-words"></span>
-		1037
+		1050
 		</span>		
 	
 	</div> 
@@ -163,22 +163,38 @@
 
 
 	  	<!--top-->
-<h1 id="一、标准盒模型（w3c-盒子模型）和-怪异盒模型（IE-盒子模型）"><a href="#一、标准盒模型（w3c-盒子模型）和-怪异盒模型（IE-盒子模型）" class="headerlink" title="一、标准盒模型（w3c 盒子模型）和 怪异盒模型（IE 盒子模型）"></a>一、标准盒模型（w3c 盒子模型）和 怪异盒模型（IE 盒子模型）</h1><p>图：<br><img src="/2018/02/12/2018-02-12CSS-%E6%A0%87%E5%87%86%E7%9B%92%E6%A8%A1%E5%9E%8B%E4%B8%8E%E6%80%AA%E5%BC%82%E7%9B%92%E6%A8%A1%E5%9E%8B/1.png" alt="栖木"><br><img src="/2018/02/12/2018-02-12CSS-%E6%A0%87%E5%87%86%E7%9B%92%E6%A8%A1%E5%9E%8B%E4%B8%8E%E6%80%AA%E5%BC%82%E7%9B%92%E6%A8%A1%E5%9E%8B/2.png" alt="栖木"></p>
+<h1
+id="一标准盒模型w3c-盒子模型和-怪异盒模型ie-盒子模型">一、标准盒模型（w3c
+盒子模型）和 怪异盒模型（IE 盒子模型）</h1>
+<p>图： <img src="1.png" alt="栖木" /> <img src="2.png"
+alt="栖木" /></p>
 <span id="more"></span>
-<h2 id="1-1标准盒模型（w3c-盒子模型）和-怪异盒模型（IE-盒子模型）："><a href="#1-1标准盒模型（w3c-盒子模型）和-怪异盒模型（IE-盒子模型）：" class="headerlink" title="1-1标准盒模型（w3c 盒子模型）和 怪异盒模型（IE 盒子模型）："></a>1-1标准盒模型（w3c 盒子模型）和 怪异盒模型（IE 盒子模型）：</h2><p>共同点:<br>都分为margin、border、padding、content。</p>
-<p>区别：<br>w3c 盒子模型 width和height圈住的部分就是content，不包含 border 和 padding。<br>IE 盒子模型 width和height圈住的部分除了content 还包含 border 和 padding。<br>正是由于有这个区别，浏览器解读时会造成困扰。</p>
-<h1 id="二、怪异模式"><a href="#二、怪异模式" class="headerlink" title="二、怪异模式"></a>二、怪异模式</h1><p>为了正确解读这两个标准，浏览器出现了两个模式。<br>一种我们称为“标准模式”（支持w3c盒子）一种我们称之为”怪异模式“（支持IE盒子）<br>部分浏览器在支持W3C标准的同时也支持IE标准。</p>
-<h2 id="2-1两种模式相互识别"><a href="#2-1两种模式相互识别" class="headerlink" title="2-1两种模式相互识别"></a>2-1两种模式相互识别</h2><p>1.IE某些版本不对doctype进行定义时，会触发怪异模式。了解更多<br><a target="_blank" rel="noopener" href="https://hsivonen.fi/doctype/">https://hsivonen.fi/doctype/</a></p>
-<p>2.解决办法。在代码顶部加如下的 doctype 声明，</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!doctype <span class="selector-tag">html</span> public “-//w3c//dtd xhtml <span class="number">1.0</span> transitional//en” “http://www.w3.org/tr/xhtml1/dtd/xhtml1-transitional.dtd<span class="string">&quot;&gt;</span></span><br></pre></td></tr></table></figure>
-<p>使页面以W3C盒子模型渲染。</p>
+<h2
+id="标准盒模型w3c-盒子模型和-怪异盒模型ie-盒子模型">1-1标准盒模型（w3c
+盒子模型）和 怪异盒模型（IE 盒子模型）：</h2>
+<p>共同点: 都分为margin、border、padding、content。</p>
+<p>区别： w3c 盒子模型 width和height圈住的部分就是content，不包含 border
+和 padding。 IE 盒子模型 width和height圈住的部分除了content 还包含
+border 和 padding。 正是由于有这个区别，浏览器解读时会造成困扰。</p>
+<h1 id="二怪异模式">二、怪异模式</h1>
+<p>为了正确解读这两个标准，浏览器出现了两个模式。
+一种我们称为“标准模式”（支持w3c盒子）一种我们称之为”怪异模式“（支持IE盒子）
+部分浏览器在支持W3C标准的同时也支持IE标准。</p>
+<h2 id="两种模式相互识别">2-1两种模式相互识别</h2>
+<p>1.IE某些版本不对doctype进行定义时，会触发怪异模式。了解更多
+https://hsivonen.fi/doctype/</p>
+<p>2.解决办法。在代码顶部加如下的 doctype 声明， <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!doctype <span class="selector-tag">html</span> public “-//w3c//dtd xhtml <span class="number">1.0</span> transitional//en” “http://www.w3.org/tr/xhtml1/dtd/xhtml1-transitional.dtd<span class="string">&quot;&gt;</span></span><br></pre></td></tr></table></figure>
+使页面以W3C盒子模型渲染。</p>
 <p>3.CSS3的box-sizing可以定义识别怪异模式</p>
-<p>box-sizing语法：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">box-sizing</span> ： <span class="attribute">content</span>-box || <span class="attribute">border</span>-box || <span class="attribute">inherit</span>;</span><br></pre></td></tr></table></figure>
-
-<p>当设置为box-sizing:content-box时，将采用标准模式解析计算，也是默认模式；<br>当设置为box-sizing:border-box时，将采用怪异模式解析计算；<br>当设置为box-sizing:inherit 规定应从父元素继承 box-sizing 属性的值。</p>
+<p>box-sizing语法： <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">box-sizing</span> ： <span class="attribute">content</span>-box || <span class="attribute">border</span>-box || <span class="attribute">inherit</span>;</span><br></pre></td></tr></table></figure></p>
+<p>当设置为box-sizing:content-box时，将采用标准模式解析计算，也是默认模式；
+当设置为box-sizing:border-box时，将采用怪异模式解析计算；
+当设置为box-sizing:inherit 规定应从父元素继承 box-sizing 属性的值。</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-webkit-<span class="attribute">box-sizing</span>: content-box; //safari</span><br><span class="line">-moz-<span class="attribute">box-sizing</span>: content-box;  //firefox</span><br></pre></td></tr></table></figure>
-<h1 id="三、参考"><a href="#三、参考" class="headerlink" title="三、参考"></a>三、参考</h1><p><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/css/css_boxmodel.asp">http://www.w3school.com.cn/css/css_boxmodel.asp</a><br><a target="_blank" rel="noopener" href="http://blog.csdn.net/dong_pt/article/details/51281372">http://blog.csdn.net/dong_pt/article/details/51281372</a><br><a target="_blank" rel="noopener" href="http://blog.csdn.net/quguang65265/article/details/50970601">http://blog.csdn.net/quguang65265/article/details/50970601</a></p>
+<h1 id="三参考">三、参考</h1>
+<p>http://www.w3school.com.cn/css/css_boxmodel.asp
+http://blog.csdn.net/dong_pt/article/details/51281372
+http://blog.csdn.net/quguang65265/article/details/50970601</p>
 
 
 	  </div>
