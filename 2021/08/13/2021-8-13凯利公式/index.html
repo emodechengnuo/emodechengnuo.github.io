@@ -1,0 +1,475 @@
+                                                               <!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport"content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes"/>
+  
+  
+  <title>  凯利公式 |   栖木</title>
+
+
+  
+    <link rel="icon" href="/img/favicon.ico">
+  
+
+
+  <!-- css -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!-- Jquery -->
+  
+<script src="//cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Add fancyBox -->
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css">
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
+
+  
+<script src="/js/gallery.js"></script>
+
+  <!-- javascript -->
+  
+<script src="/js/mobile.js"></script>
+
+  
+<script src="/js/utils.js"></script>
+
+  
+<script src="/js/script.js"></script>
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+  <body>
+    <header class="header">
+	
+  <nav class="header-nav">       
+	
+  	<span class="iconfont icon-menu mobile-toggle"></span>  
+
+    <a class="header-logo" href="/"><span>栖木</a>  
+
+    <div class="header-menu">          
+              
+            
+
+              <a class="header-menu-link" id="header-menu-home" href="/">首页</a>     
+
+            
+            
+            
+
+              <a class="header-menu-link" id="header-menu-archives" href="/archives">归档</a>     
+
+            
+            
+            
+
+              <a class="header-menu-link" id="header-menu-categories" href="/categories">分类</a>     
+
+            
+            
+            
+
+              <a class="header-menu-link" id="header-menu-tags" href="/tags">标签</a>     
+
+            
+            
+            
+
+              <a class="header-menu-link" id="header-menu-music" href="/music">音乐</a>     
+
+            
+            
+            
+
+              <a class="header-menu-link" id="header-menu-about" href="/about">关于</a>     
+
+            
+            
+            
+
+              <a class="iconfont icon-menu-search header-menu-link" id="header-menu-search"></a>
+
+            
+                
+    </div>  
+    
+  </nav>
+</header>
+
+    <div class="container">
+
+        
+
+          <section id="main">
+
+        
+
+        <article class="post">
+
+
+	<div class="post-header slideDownMin center">
+
+	<span class="post-title">	
+		凯利公式
+	</span>
+
+	
+	<div class="post-info">
+
+		<time class="post-time"><span class="iconfont icon-date"></span>
+		2021/08/13 	
+		</time>
+		
+					
+
+				<span class="post-meta">		
+				<span class="iconfont icon-category"></span>
+				<a class="category-link" href="/categories/%E4%BA%A4%E6%98%93/">交易</a>
+				</span>
+		
+			
+
+		
+				
+				<span class="post-meta">
+				<span class="iconfont icon-tag"></span>
+				<a class="tag-none-link" href="/tags/%E8%82%A1%E7%A5%A8%E5%AE%9A%E4%BB%B7/" rel="tag">股票定价</a> <a class="tag-none-link" href="/tags/%E9%87%91%E8%9E%8D/" rel="tag">金融</a>
+				</span>			
+			
+
+
+		
+
+		<span class="post-words"><span class="iconfont icon-words"></span>
+		818
+		</span>		
+	
+	</div> 
+
+</div>
+
+
+	  <div class="post-content slideDownMin">
+
+		
+
+
+
+
+	  	<p>因为需要对仓位进行管理，所以常常听到凯利公式。索性总结备份在下面。</p>
+<span id="more"></span>
+<h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><p>在概率论中，凯利公式（也称 “凯利方程式” The Kelly Criterion）是一个在期望净收益为正的独立重复赌局中，使本金的长期增长率最大化的投注策略。</p>
+<h1 id="公式推导"><a href="#公式推导" class="headerlink" title="公式推导"></a>公式推导</h1><p>设赌客的本金为 N，投注比例为 f，游戏每局有 n 种结果，第 i 种结果的净收益率为 ri，发生的概率为 pi。则一局后对数本金 ln N 的增量（对数增长率）的数学期望为<br><img src="/2021/08/13/2021-8-13%E5%87%AF%E5%88%A9%E5%85%AC%E5%BC%8F/1.png" alt="栖木"><br>令上式对 f 求导，取极值时的投注比例 f 满足方程<br><img src="/2021/08/13/2021-8-13%E5%87%AF%E5%88%A9%E5%85%AC%E5%BC%8F/2.png" alt="栖木"><br>满足以上方程（即 “凯利方程式”）的解 f &#x3D; f* 即为最佳的投资比例。当期望净收益率 Σi pi ri &gt; 0 时，解得 f* &gt; 0。期望收益率为零或负时，由于通常赌局不允许 f &lt; 0 反向下注，此时最佳策略是 f &#x3D; 0，即不赌为赢。如果每局游戏只有 n &#x3D; 2 种结果（赢或输），其中 r1 &#x3D; rw &gt; 0，r2 &#x3D; -rL &lt; 0，p1 &#x3D; p，p2 &#x3D; 1 – p，则凯利方程的解 f &#x3D; f* 为<br><img src="/2021/08/13/2021-8-13%E5%87%AF%E5%88%A9%E5%85%AC%E5%BC%8F/3.png" alt="栖木"><br>这个公式称作 “凯利公式”。如果每次赢的时候回报是 1 赔 b，输的时候是输光全部赌注，则 rw &#x3D; b – 1 为净赔率，而 rL &#x3D; 1。此时凯利公式简化为<br><img src="/2021/08/13/2021-8-13%E5%87%AF%E5%88%A9%E5%85%AC%E5%BC%8F/4.png" alt="栖木"><br>举例而言，设每局有 p &#x3D; 40% 的获胜率，而赌客在赢得赌局时，可获得 1 赔 3 的赔率（b &#x3D; 3），输了就损失赌注，则赌客应在每局中下注现有资金的 f* &#x3D; 10%，以最大化资金的长期增长率<br><img src="/2021/08/13/2021-8-13%E5%87%AF%E5%88%A9%E5%85%AC%E5%BC%8F/5.png" alt="栖木"><br>凯利公式数学模型3d图<br><img src="/2021/08/13/2021-8-13%E5%87%AF%E5%88%A9%E5%85%AC%E5%BC%8F/6.png" alt="栖木"></p>
+<h1 id="凯利公式的运用"><a href="#凯利公式的运用" class="headerlink" title="凯利公式的运用"></a>凯利公式的运用</h1><p>凯利公式在投资中可作如下应用：</p>
+<ol>
+<li>凯利公式不能代替选股。</li>
+<li>凯利公式可以<code>选时</code>，即使是有投资价值的公司，也有高估和低估的时候，可以用凯利公式进行选时比较。</li>
+<li>凯利公式适合作为资产配置的考虑，对于资金管理比较有利,可以充分考虑机会成本。</li>
+<li>因为很少有盈亏比大于20的机会，若胜率小于0.2，在现实生活中是不值得投资的。</li>
+<li>如果胜率一般在0.4~0.5，不要参与盈亏比小于2的投资。</li>
+</ol>
+
+
+	  </div>
+
+
+	<div class="post-footer">    
+
+  
+
+
+
+
+<span class="donate-btn iconfont icon-donate "></span>
+
+
+<div id="donate-box" class="sildeUpMin">
+
+	<span class="donate-cancel iconfont icon-cancel"></span>
+
+	<div class="donate-img-box">
+		<img id="donate-qr-wechat" class="donate-img no-gallery" src="/img/donate1.jpg"  alt="Lost">	
+		<img id="donate-qr-alipay" class="donate-img no-gallery" src="/img/donate2.jpg"  alt="Lost">	
+	</div>
+
+	<span class="donate-word">谢谢支持</span>
+
+	<div class="donate-list">
+		<span class="iconfont icon-donate-wechat"></span>
+		<span class="iconfont icon-donate-alipay"></span>
+	</div>
+
+</div>
+
+ 
+  
+	
+<script id="-mob-share" src="https://f1.webshare.mob.com/code/mob-share.js?appkey=21d601593a1de"></script>
+	
+	<span class="share-btn iconfont icon-share">
+	</span>
+
+
+	<div class="-mob-share sildeUpMin">
+		                  
+            <span class="iconfont  icon-share-qq -mob-share-qq" title="qq"></span>
+     	                  
+            <span class="iconfont  icon-share-weixin -mob-share-weixin" title="weixin"></span>
+     	                  
+            <span class="iconfont  icon-share-weibo -mob-share-weibo" title="weibo"></span>
+     	                  
+            <span class="iconfont  icon-share-douban -mob-share-douban" title="douban"></span>
+     	                  
+            <span class="iconfont  icon-share-facebook -mob-share-facebook" title="facebook"></span>
+     	                  
+            <span class="iconfont  icon-share-twitter -mob-share-twitter" title="twitter"></span>
+     	                  
+            <span class="iconfont  icon-share-google -mob-share-google" title="google"></span>
+     	   
+	</div>
+	
+
+
+
+   <nav class="post-nav">
+
+      
+       
+
+         
+
+      
+          <a href="/2021/09/02/2021-9-2%E4%BD%BF%E7%94%A8hexo-github%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B%EF%BC%88%E5%A4%87%E4%BB%BD%EF%BC%89/">          
+
+            <span title="Blog备份转移教程">  上一篇 </span>
+
+          </a>
+    
+      
+    
+      
+
+         
+
+          <a href="/2021/07/07/2021-7-7%E7%8B%AD%E4%B9%89%E7%9B%B8%E5%AF%B9%E8%AE%BA%E3%80%81%E6%97%B6%E7%A9%BA%E9%94%99%E4%BD%8D%E5%92%8C%E5%BC%82%E5%9C%B0%E6%81%8B%EF%BC%9F/">         
+
+           <span title="狭义相对论、时空错位和异地恋？">下一篇 </span>  
+
+          </a>
+
+      
+
+  </nav>  
+</div>
+	
+
+<div id="comment">   
+</div>
+
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine@v1.1.8-beta/dist/Valine.min.js'></script>
+
+
+<script>
+    new Valine({
+    el: '#comment',
+    notify:false, 
+    verify:false, 
+    app_id: 'ewOYpsuWTba89mW5GlnNGnqx-gzGzoHsz',
+    app_key: 'vkIuAOR4YeIygm8PxEmSheuQ',  
+    path:window.location.pathname, 
+    avatar:'mm' ,
+    guest_info:['nick','mail']
+    });
+</script>
+
+
+
+
+
+<style type="text/css">
+
+</style>
+
+
+<script>
+//set the placeholder
+$(function(){    
+
+    $('.vnick').attr('placeholder','昵称');
+    $('.veditor').attr('placeholder','说点什么吧');
+    $('.vmail').attr('placeholder','邮箱');   
+    $('.vsubmit').html('回复');   
+   
+})  
+</script>
+
+
+
+</article>
+
+
+
+<div id="toc" >		
+
+	<div class="toc-container">	
+
+	<span class="toc-contents iconfont icon-open"" onclick="change()"> 
+	<span>目录</span>
+	</span>
+
+	<ul class="toc-list"></ul>
+
+	</div>
+
+</div>
+
+
+
+<script src="/js/toc.js"></script>
+
+
+<script src="/js/post.js"></script>
+
+</section>
+
+    </div>
+
+
+    <div class="mask"> </div>
+    <div class="back-to-top iconfont icon-backtotop fadeIn"></div>
+
+    
+
+
+
+<script src="/js/search.js"></script>
+     
+          
+          <div class="search-container sildeUpMin">
+            <input type="text" placeholder="输入你想搜索的" id="search-input" class="search-input">  
+              <span class="search-cancel iconfont icon-cancel"></span>
+              <div id="search-result" class="search-result"></div>
+          </div>
+ 
+
+     <div class="mobile-menu">      
+
+      
+      <img class="mobile-menu-icon no-gallery" src= /img/favicon.ico >   
+      
+
+         
+            
+
+            <a class="mobile-menu-link" href="/">首页
+            </a>
+            
+         
+            
+
+            <a class="mobile-menu-link" href="/archives">归档
+            </a>
+            
+         
+            
+
+            <a class="mobile-menu-link" href="/categories">分类
+            </a>
+            
+         
+            
+
+            <a class="mobile-menu-link" href="/tags">标签
+            </a>
+            
+         
+            
+
+            <a class="mobile-menu-link" href="/music">音乐
+            </a>
+            
+         
+            
+
+            <a class="mobile-menu-link" href="/about">关于
+            </a>
+            
+         
+                          
+
+            <a class="mobile-menu-link mobile-menu-search" href="#">搜索 </a>                 
+            
+         
+</div>
+    
+
+<footer id="footer">
+
+   	 <div>
+	   	 
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+			     <span class="iconfont icon-pv"></span>
+			     <span id="busuanzi_value_site_pv"></span>
+
+			     <span class="iconfont icon-uv"></span>
+			     <span id="busuanzi_value_site_uv"></span>
+		 
+   	 </div>
+
+
+	 <div>
+	 	&copy;
+		2025
+
+
+	 </div>
+
+
+
+   	 <div>
+
+	 <a href="http://www.pixelcoffee9.com" target="_blank">栖木</a>
+
+	 From Alan
+
+
+	 </div>
+
+
+
+
+
+</footer>
+
+    
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?988462ad37317c8b6f18bbf2e3b5655a";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+
+
+  </body>
+  
+<script src="/js/animation.js"></script>
+
+</html>

@@ -1,0 +1,480 @@
+                                                               <!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport"content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes"/>
+  
+  
+  <title>  CSS-标准盒模型与怪异盒模型 |   栖木</title>
+
+
+  
+    <link rel="icon" href="/img/favicon.ico">
+  
+
+
+  <!-- css -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!-- Jquery -->
+  
+<script src="//cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Add fancyBox -->
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css">
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
+
+  
+<script src="/js/gallery.js"></script>
+
+  <!-- javascript -->
+  
+<script src="/js/mobile.js"></script>
+
+  
+<script src="/js/utils.js"></script>
+
+  
+<script src="/js/script.js"></script>
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+  <body>
+    <header class="header">
+	
+  <nav class="header-nav">       
+	
+  	<span class="iconfont icon-menu mobile-toggle"></span>  
+
+    <a class="header-logo" href="/"><span>栖木</a>  
+
+    <div class="header-menu">          
+              
+            
+
+              <a class="header-menu-link" id="header-menu-home" href="/">首页</a>     
+
+            
+            
+            
+
+              <a class="header-menu-link" id="header-menu-archives" href="/archives">归档</a>     
+
+            
+            
+            
+
+              <a class="header-menu-link" id="header-menu-categories" href="/categories">分类</a>     
+
+            
+            
+            
+
+              <a class="header-menu-link" id="header-menu-tags" href="/tags">标签</a>     
+
+            
+            
+            
+
+              <a class="header-menu-link" id="header-menu-music" href="/music">音乐</a>     
+
+            
+            
+            
+
+              <a class="header-menu-link" id="header-menu-about" href="/about">关于</a>     
+
+            
+            
+            
+
+              <a class="iconfont icon-menu-search header-menu-link" id="header-menu-search"></a>
+
+            
+                
+    </div>  
+    
+  </nav>
+</header>
+
+    <div class="container">
+
+        
+
+          <section id="main">
+
+        
+
+        <article class="post">
+
+
+	<div class="post-header slideDownMin center">
+
+	<span class="post-title">	
+		CSS-标准盒模型与怪异盒模型
+	</span>
+
+	
+	<div class="post-info">
+
+		<time class="post-time"><span class="iconfont icon-date"></span>
+		2018/02/12 	
+		</time>
+		
+					
+
+				<span class="post-meta">		
+				<span class="iconfont icon-category"></span>
+				<a class="category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a>
+				</span>
+		
+			
+
+		
+				
+				<span class="post-meta">
+				<span class="iconfont icon-tag"></span>
+				<a class="tag-none-link" href="/tags/CSS/" rel="tag">CSS</a> <a class="tag-none-link" href="/tags/HTML/" rel="tag">HTML</a> <a class="tag-none-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a> <a class="tag-none-link" href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag">编程</a>
+				</span>			
+			
+
+
+		
+
+		<span class="post-words"><span class="iconfont icon-words"></span>
+		1037
+		</span>		
+	
+	</div> 
+
+</div>
+
+
+	  <div class="post-content slideDownMin">
+
+		
+
+
+
+
+	  	<!--top-->
+<h1 id="一、标准盒模型（w3c-盒子模型）和-怪异盒模型（IE-盒子模型）"><a href="#一、标准盒模型（w3c-盒子模型）和-怪异盒模型（IE-盒子模型）" class="headerlink" title="一、标准盒模型（w3c 盒子模型）和 怪异盒模型（IE 盒子模型）"></a>一、标准盒模型（w3c 盒子模型）和 怪异盒模型（IE 盒子模型）</h1><p>图：<br><img src="/2018/02/12/2018-02-12CSS-%E6%A0%87%E5%87%86%E7%9B%92%E6%A8%A1%E5%9E%8B%E4%B8%8E%E6%80%AA%E5%BC%82%E7%9B%92%E6%A8%A1%E5%9E%8B/1.png" alt="栖木"><br><img src="/2018/02/12/2018-02-12CSS-%E6%A0%87%E5%87%86%E7%9B%92%E6%A8%A1%E5%9E%8B%E4%B8%8E%E6%80%AA%E5%BC%82%E7%9B%92%E6%A8%A1%E5%9E%8B/2.png" alt="栖木"></p>
+<span id="more"></span>
+<h2 id="1-1标准盒模型（w3c-盒子模型）和-怪异盒模型（IE-盒子模型）："><a href="#1-1标准盒模型（w3c-盒子模型）和-怪异盒模型（IE-盒子模型）：" class="headerlink" title="1-1标准盒模型（w3c 盒子模型）和 怪异盒模型（IE 盒子模型）："></a>1-1标准盒模型（w3c 盒子模型）和 怪异盒模型（IE 盒子模型）：</h2><p>共同点:<br>都分为margin、border、padding、content。</p>
+<p>区别：<br>w3c 盒子模型 width和height圈住的部分就是content，不包含 border 和 padding。<br>IE 盒子模型 width和height圈住的部分除了content 还包含 border 和 padding。<br>正是由于有这个区别，浏览器解读时会造成困扰。</p>
+<h1 id="二、怪异模式"><a href="#二、怪异模式" class="headerlink" title="二、怪异模式"></a>二、怪异模式</h1><p>为了正确解读这两个标准，浏览器出现了两个模式。<br>一种我们称为“标准模式”（支持w3c盒子）一种我们称之为”怪异模式“（支持IE盒子）<br>部分浏览器在支持W3C标准的同时也支持IE标准。</p>
+<h2 id="2-1两种模式相互识别"><a href="#2-1两种模式相互识别" class="headerlink" title="2-1两种模式相互识别"></a>2-1两种模式相互识别</h2><p>1.IE某些版本不对doctype进行定义时，会触发怪异模式。了解更多<br><a target="_blank" rel="noopener" href="https://hsivonen.fi/doctype/">https://hsivonen.fi/doctype/</a></p>
+<p>2.解决办法。在代码顶部加如下的 doctype 声明，</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!doctype <span class="selector-tag">html</span> public “-//w3c//dtd xhtml <span class="number">1.0</span> transitional//en” “http://www.w3.org/tr/xhtml1/dtd/xhtml1-transitional.dtd<span class="string">&quot;&gt;</span></span><br></pre></td></tr></table></figure>
+<p>使页面以W3C盒子模型渲染。</p>
+<p>3.CSS3的box-sizing可以定义识别怪异模式</p>
+<p>box-sizing语法：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">box-sizing</span> ： <span class="attribute">content</span>-box || <span class="attribute">border</span>-box || inherit;</span><br></pre></td></tr></table></figure>
+
+<p>当设置为box-sizing:content-box时，将采用标准模式解析计算，也是默认模式；<br>当设置为box-sizing:border-box时，将采用怪异模式解析计算；<br>当设置为box-sizing:inherit 规定应从父元素继承 box-sizing 属性的值。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-webkit-<span class="attribute">box-sizing</span>: content-box; //safari</span><br><span class="line">-moz-<span class="attribute">box-sizing</span>: content-box;  //firefox</span><br></pre></td></tr></table></figure>
+<h1 id="三、参考"><a href="#三、参考" class="headerlink" title="三、参考"></a>三、参考</h1><p><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/css/css_boxmodel.asp">http://www.w3school.com.cn/css/css_boxmodel.asp</a><br><a target="_blank" rel="noopener" href="http://blog.csdn.net/dong_pt/article/details/51281372">http://blog.csdn.net/dong_pt/article/details/51281372</a><br><a target="_blank" rel="noopener" href="http://blog.csdn.net/quguang65265/article/details/50970601">http://blog.csdn.net/quguang65265/article/details/50970601</a></p>
+
+
+	  </div>
+
+
+	<div class="post-footer">    
+
+  
+
+
+
+
+<span class="donate-btn iconfont icon-donate "></span>
+
+
+<div id="donate-box" class="sildeUpMin">
+
+	<span class="donate-cancel iconfont icon-cancel"></span>
+
+	<div class="donate-img-box">
+		<img id="donate-qr-wechat" class="donate-img no-gallery" src="/img/donate1.jpg"  alt="Lost">	
+		<img id="donate-qr-alipay" class="donate-img no-gallery" src="/img/donate2.jpg"  alt="Lost">	
+	</div>
+
+	<span class="donate-word">谢谢支持</span>
+
+	<div class="donate-list">
+		<span class="iconfont icon-donate-wechat"></span>
+		<span class="iconfont icon-donate-alipay"></span>
+	</div>
+
+</div>
+
+ 
+  
+	
+<script id="-mob-share" src="https://f1.webshare.mob.com/code/mob-share.js?appkey=21d601593a1de"></script>
+	
+	<span class="share-btn iconfont icon-share">
+	</span>
+
+
+	<div class="-mob-share sildeUpMin">
+		                  
+            <span class="iconfont  icon-share-qq -mob-share-qq" title="qq"></span>
+     	                  
+            <span class="iconfont  icon-share-weixin -mob-share-weixin" title="weixin"></span>
+     	                  
+            <span class="iconfont  icon-share-weibo -mob-share-weibo" title="weibo"></span>
+     	                  
+            <span class="iconfont  icon-share-douban -mob-share-douban" title="douban"></span>
+     	                  
+            <span class="iconfont  icon-share-facebook -mob-share-facebook" title="facebook"></span>
+     	                  
+            <span class="iconfont  icon-share-twitter -mob-share-twitter" title="twitter"></span>
+     	                  
+            <span class="iconfont  icon-share-google -mob-share-google" title="google"></span>
+     	   
+	</div>
+	
+
+
+
+   <nav class="post-nav">
+
+      
+       
+
+         
+
+      
+          <a href="/2018/02/18/2018-2-18%E5%85%94%E5%AD%90%E5%92%8C%E8%80%81%E8%99%8E/">          
+
+            <span title="兔子和老虎">  上一篇 </span>
+
+          </a>
+    
+      
+    
+      
+
+         
+
+          <a href="/2018/02/10/2018-02-10%E7%86%AC%E9%B8%A1%E6%B1%A4%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E6%94%BE%E7%9B%90/">         
+
+           <span title="熬鸡汤什么时候放盐">下一篇 </span>  
+
+          </a>
+
+      
+
+  </nav>  
+</div>
+	
+
+<div id="comment">   
+</div>
+
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine@v1.1.8-beta/dist/Valine.min.js'></script>
+
+
+<script>
+    new Valine({
+    el: '#comment',
+    notify:false, 
+    verify:false, 
+    app_id: 'ewOYpsuWTba89mW5GlnNGnqx-gzGzoHsz',
+    app_key: 'vkIuAOR4YeIygm8PxEmSheuQ',  
+    path:window.location.pathname, 
+    avatar:'mm' ,
+    guest_info:['nick','mail']
+    });
+</script>
+
+
+
+
+
+<style type="text/css">
+
+</style>
+
+
+<script>
+//set the placeholder
+$(function(){    
+
+    $('.vnick').attr('placeholder','昵称');
+    $('.veditor').attr('placeholder','说点什么吧');
+    $('.vmail').attr('placeholder','邮箱');   
+    $('.vsubmit').html('回复');   
+   
+})  
+</script>
+
+
+
+</article>
+
+
+
+<div id="toc" >		
+
+	<div class="toc-container">	
+
+	<span class="toc-contents iconfont icon-open"" onclick="change()"> 
+	<span>目录</span>
+	</span>
+
+	<ul class="toc-list"></ul>
+
+	</div>
+
+</div>
+
+
+
+<script src="/js/toc.js"></script>
+
+
+<script src="/js/post.js"></script>
+
+</section>
+
+    </div>
+
+
+    <div class="mask"> </div>
+    <div class="back-to-top iconfont icon-backtotop fadeIn"></div>
+
+    
+
+
+
+<script src="/js/search.js"></script>
+     
+          
+          <div class="search-container sildeUpMin">
+            <input type="text" placeholder="输入你想搜索的" id="search-input" class="search-input">  
+              <span class="search-cancel iconfont icon-cancel"></span>
+              <div id="search-result" class="search-result"></div>
+          </div>
+ 
+
+     <div class="mobile-menu">      
+
+      
+      <img class="mobile-menu-icon no-gallery" src= /img/favicon.ico >   
+      
+
+         
+            
+
+            <a class="mobile-menu-link" href="/">首页
+            </a>
+            
+         
+            
+
+            <a class="mobile-menu-link" href="/archives">归档
+            </a>
+            
+         
+            
+
+            <a class="mobile-menu-link" href="/categories">分类
+            </a>
+            
+         
+            
+
+            <a class="mobile-menu-link" href="/tags">标签
+            </a>
+            
+         
+            
+
+            <a class="mobile-menu-link" href="/music">音乐
+            </a>
+            
+         
+            
+
+            <a class="mobile-menu-link" href="/about">关于
+            </a>
+            
+         
+                          
+
+            <a class="mobile-menu-link mobile-menu-search" href="#">搜索 </a>                 
+            
+         
+</div>
+    
+
+<footer id="footer">
+
+   	 <div>
+	   	 
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+			     <span class="iconfont icon-pv"></span>
+			     <span id="busuanzi_value_site_pv"></span>
+
+			     <span class="iconfont icon-uv"></span>
+			     <span id="busuanzi_value_site_uv"></span>
+		 
+   	 </div>
+
+
+	 <div>
+	 	&copy;
+		2025
+
+
+	 </div>
+
+
+
+   	 <div>
+
+	 <a href="http://www.pixelcoffee9.com" target="_blank">栖木</a>
+
+	 From Alan
+
+
+	 </div>
+
+
+
+
+
+</footer>
+
+    
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?988462ad37317c8b6f18bbf2e3b5655a";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+
+
+  </body>
+  
+<script src="/js/animation.js"></script>
+
+</html>

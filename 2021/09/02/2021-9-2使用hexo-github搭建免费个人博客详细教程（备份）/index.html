@@ -1,0 +1,525 @@
+                                                               <!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport"content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes"/>
+  
+  
+  <title>  Blog备份转移教程 |   栖木</title>
+
+
+  
+    <link rel="icon" href="/img/favicon.ico">
+  
+
+
+  <!-- css -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!-- Jquery -->
+  
+<script src="//cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Add fancyBox -->
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css">
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
+
+  
+<script src="/js/gallery.js"></script>
+
+  <!-- javascript -->
+  
+<script src="/js/mobile.js"></script>
+
+  
+<script src="/js/utils.js"></script>
+
+  
+<script src="/js/script.js"></script>
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+  <body>
+    <header class="header">
+	
+  <nav class="header-nav">       
+	
+  	<span class="iconfont icon-menu mobile-toggle"></span>  
+
+    <a class="header-logo" href="/"><span>栖木</a>  
+
+    <div class="header-menu">          
+              
+            
+
+              <a class="header-menu-link" id="header-menu-home" href="/">首页</a>     
+
+            
+            
+            
+
+              <a class="header-menu-link" id="header-menu-archives" href="/archives">归档</a>     
+
+            
+            
+            
+
+              <a class="header-menu-link" id="header-menu-categories" href="/categories">分类</a>     
+
+            
+            
+            
+
+              <a class="header-menu-link" id="header-menu-tags" href="/tags">标签</a>     
+
+            
+            
+            
+
+              <a class="header-menu-link" id="header-menu-music" href="/music">音乐</a>     
+
+            
+            
+            
+
+              <a class="header-menu-link" id="header-menu-about" href="/about">关于</a>     
+
+            
+            
+            
+
+              <a class="iconfont icon-menu-search header-menu-link" id="header-menu-search"></a>
+
+            
+                
+    </div>  
+    
+  </nav>
+</header>
+
+    <div class="container">
+
+        
+
+          <section id="main">
+
+        
+
+        <article class="post">
+
+
+	<div class="post-header slideDownMin center">
+
+	<span class="post-title">	
+		Blog备份转移教程
+	</span>
+
+	
+	<div class="post-info">
+
+		<time class="post-time"><span class="iconfont icon-date"></span>
+		2021/09/02 	
+		</time>
+		
+					
+
+				<span class="post-meta">		
+				<span class="iconfont icon-category"></span>
+				<a class="category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a>
+				</span>
+		
+			
+
+		
+				
+				<span class="post-meta">
+				<span class="iconfont icon-tag"></span>
+				<a class="tag-none-link" href="/tags/Github/" rel="tag">Github</a> <a class="tag-none-link" href="/tags/Hexo/" rel="tag">Hexo</a>
+				</span>			
+			
+
+
+		
+
+		<span class="post-words"><span class="iconfont icon-words"></span>
+		3465
+		</span>		
+	
+	</div> 
+
+</div>
+
+
+	  <div class="post-content slideDownMin">
+
+		
+
+
+
+
+	  	<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>使用github pages服务搭建博客的好处有：</p>
+<blockquote>
+<p>1.全是静态文件，访问速度快；<br>2.免费方便，不用花一分钱就可以搭建一个自由的个人博客，不需要服务器不需要后台；<br>3.可以随意绑定自己的域名，不仔细看的话根本看不出来你的网站是基于github的；<br>4.数据绝对安全，基于github的版本管理，想恢复到哪个历史版本都行；<br>5.博客内容可以轻松打包、转移、发布到其它平台；<br>等等；</p>
+</blockquote>
+<h3 id="为了方便以后blog转移，备份一下转移过程"><a href="#为了方便以后blog转移，备份一下转移过程" class="headerlink" title="为了方便以后blog转移，备份一下转移过程"></a>为了方便以后blog转移，备份一下转移过程</h3><span id="more"></span>
+<h1 id="复制备份文件"><a href="#复制备份文件" class="headerlink" title="复制备份文件"></a>复制备份文件</h1><p>主要是<code>source</code>和<code>theme</code>文件夹</p>
+<h1 id="搭建github博客"><a href="#搭建github博客" class="headerlink" title="搭建github博客"></a>搭建github博客</h1><p>新建一个名为你的用户名.github.io的仓库，比如说，如果你的github用户名是test，那么你就新建test.github.io的仓库（必须是你的用户名，其它名称无效），将来你的网站访问地址就是 <a target="_blank" rel="noopener" href="http://test.github.io/">http://test.github.io</a> 了，是不是很方便？</p>
+<p>由此可见，每一个github账户最多只能创建一个这样可以直接使用域名访问的仓库。</p>
+<p>几个注意的地方：</p>
+<blockquote>
+<p>注册的邮箱一定要验证，否则不会成功；<br>仓库名字必须是：<code>username.github.io</code>，其中<code>username</code>是你的用户名；<br>仓库创建成功不会立即生效，需要过一段时间，大概10-30分钟，或者更久，我的等了半个小时才生效；</p>
+</blockquote>
+<p>创建成功后，默认会在你这个仓库里生成一些示例页面，以后你的网站所有代码都是放在这个仓库里啦。</p>
+<h1 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h1><p>当然，你不绑定域名肯定也是可以的，就用默认的 <code>xxx.github.io </code>来访问，如果你想更个性一点，想拥有一个属于自己的域名，那也是OK的。</p>
+<p>首先你要注册一个域名，域名注册以前总是推荐去<code>godaddy</code>，现在觉得其实国内的阿里云也挺不错的，价格也不贵，毕竟是大公司，放心！</p>
+<p>绑定域名分2种情况：带www和不带www的。</p>
+<p>域名配置最常见有2种方式，CNAME和A记录，CNAME填写域名，A记录填写IP，由于不带www方式只能采用A记录，所以必须先ping一下<code>你的用户名.github.io</code>的IP，然后到你的域名DNS设置页，将A记录指向你ping出来的IP，将CNAME指向<code>你的用户名.github.io</code>，这样可以保证无论是否添加www都可以访问，如下：</p>
+<p><img src="/2021/09/02/2021-9-2%E4%BD%BF%E7%94%A8hexo-github%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B%EF%BC%88%E5%A4%87%E4%BB%BD%EF%BC%89/1.png" alt="栖木"></p>
+<p>然后到你的github项目根目录新建一个名为CNAME的文件（无后缀），里面填写你的域名，加不加www看你自己喜好，因为经测试：</p>
+<blockquote>
+<p>如果你填写的是没有www的，比如 mygit.me，那么无论是访问 <a target="_blank" rel="noopener" href="http://www.mygit.me/">http://www.mygit.me</a> 还是 <a target="_blank" rel="noopener" href="http://mygit.me/">http://mygit.me</a> ，都会自动跳转到 <a target="_blank" rel="noopener" href="http://mygit.me/">http://mygit.me</a><br>如果你填写的是带www的，比如 <a target="_blank" rel="noopener" href="http://www.mygit.me/">www.mygit.me</a> ，那么无论是访问 <a target="_blank" rel="noopener" href="http://www.mygit.me/">http://www.mygit.me</a> 还是 <a target="_blank" rel="noopener" href="http://mygit.me/">http://mygit.me</a> ，都会自动跳转到 <a target="_blank" rel="noopener" href="http://www.mygit.me/">http://www.mygit.me</a><br>如果你填写的是其它子域名，比如 abc.mygit.me，那么访问 <a target="_blank" rel="noopener" href="http://abc.mygit.me/">http://abc.mygit.me</a> 没问题，但是访问 <a target="_blank" rel="noopener" href="http://mygit.me/">http://mygit.me</a> ，不会自动跳转到 <a target="_blank" rel="noopener" href="http://abc.mygit.me/">http://abc.mygit.me</a></p>
+</blockquote>
+<p>另外说一句，在你绑定了新域名之后，原来的<code>你的用户名.github.io</code>并没有失效，而是会自动跳转到你的新域名。</p>
+<h1 id="下载安装git"><a href="#下载安装git" class="headerlink" title="下载安装git"></a>下载安装git</h1><p><a href="https://git-scm.com/downloads" target="_blank" rel="noopener">官网下载git</a></p>
+<p>安装完成打开</p>
+<h1 id="配置SSH-key"><a href="#配置SSH-key" class="headerlink" title="配置SSH key"></a>配置SSH key</h1><p>为什么要配置这个呢？因为你提交代码肯定要拥有你的github权限才可以，但是直接使用用户名和密码太不安全了，所以我们使用ssh key来解决本地和服务器的连接问题。</p>
+<p>用git bash执行如下命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cd ~/. ssh #检查本机已存在的ssh密钥</span><br></pre></td></tr></table></figure>
+<p>如果提示：<code>No such file or directory </code>说明你是第一次使用git。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;邮件地址&quot;</span><br></pre></td></tr></table></figure>
+<p>然后连续3次回车，最终会生成一个文件在用户目录下，打开用户目录，找到<code>.ssh\id_rsa.pub</code>文件，记事本打开并复制里面的内容，打开你的github主页，进入个人设置 -&gt; SSH and GPG keys -&gt; New SSH key：<br><img src="/2021/09/02/2021-9-2%E4%BD%BF%E7%94%A8hexo-github%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B%EF%BC%88%E5%A4%87%E4%BB%BD%EF%BC%89/2.png" alt="栖木"><br>将刚复制的内容粘贴到key那里，title随便填，保存。</p>
+<h1 id="测试是否成功"><a href="#测试是否成功" class="headerlink" title="测试是否成功"></a>测试是否成功</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com # 注意邮箱地址不用改</span><br></pre></td></tr></table></figure>
+<p>如果提示<code>Are you sure you want to continue connecting (yes/no)?，</code>输入yes，然后会看到：</p>
+<p><code>Hi xxx! You’ve successfully authenticated, but GitHub does not provide shell access.</code><br>看到这个信息说明SSH已配置成功！</p>
+<p>此时你还需要配置：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name &quot;xxx&quot;// 你的github用户名，非昵称</span><br><span class="line">$ git config --global user.email  &quot;xxx@qq.com&quot;// 填写你的github注册邮箱</span><br></pre></td></tr></table></figure>
+<h1 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h1><p>首先安装node.js<br>因为hexo是基于node.js的，所以node.js是必须要装的，安装也特别简单，去<a href="https://nodejs.org/en/" title="官网" target="_blank" rel="noopener">node.js</a>下载适合自己系统的版本。</p>
+<p>安装hexo</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>windows版本安装时发现的小问题<br>cmd正常 powershell会显示错误：<br>因为在此系统上禁止运行脚本。有关详细信息，请参阅 https: &#x2F;go.microsoft.com&#x2F;fwlink&#x2F;?LinkID&#x3D;135170 中的 about_Execution_Policies…<br>解决办法 输入<code>set-executionpolicy remotesigned</code>修改权限</p>
+</blockquote>
+<p>输入 hexo -v 出现一系列的版本号就是安装成功了</p>
+<h1 id="生成博客"><a href="#生成博客" class="headerlink" title="生成博客"></a>生成博客</h1><p>在电脑的某个地方新建一个名为hexo的文件夹（名字可以随便取），比如我的是F:\Workspaces\hexo，由于这个文件夹将来就作为你存放代码的地方，所以最好不要随便放。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cd /f/Workspaces/hexo/</span><br><span class="line">$ hexo init</span><br></pre></td></tr></table></figure>
+<p>hexo会自动下载一些文件到这个目录，包括node_modules，目录结构如下图：<br><img src="/2021/09/02/2021-9-2%E4%BD%BF%E7%94%A8hexo-github%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B%EF%BC%88%E5%A4%87%E4%BB%BD%EF%BC%89/3.png" alt="栖木"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g # 生成</span><br><span class="line">$ hexo s # 启动服务</span><br></pre></td></tr></table></figure>
+<p>执行以上命令之后，hexo就会在public文件夹生成相关html文件，这些文件将来都是要提交到github去的：<br><img src="/2021/09/02/2021-9-2%E4%BD%BF%E7%94%A8hexo-github%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B%EF%BC%88%E5%A4%87%E4%BB%BD%EF%BC%89/4.png" alt="栖木"><br><code>hexo s</code>是开启本地预览服务，打开浏览器访问 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a> 即可看到内容，很多人会碰到浏览器一直在转圈但是就是加载不出来的问题，一般情况下是因为端口占用的缘故，因为4000这个端口太常见了，解决端口冲突问题请参考这篇文章：</p>
+<p><a target="_blank" rel="noopener" href="http://blog.liuxianan.com/windows-port-bind.html">http://blog.liuxianan.com/windows-port-bind.html</a></p>
+<h1 id="上传之前配置"><a href="#上传之前配置" class="headerlink" title="上传之前配置"></a>上传之前配置</h1><p>复制<code>source</code>和<code>theme</code>文件夹<br>修改<code>_config.yml</code>中的<code>theme: landscape</code>改为<code>theme: 主题名字</code>，然后重新执行<code>hexo g</code>来重新生成。<br>如果出现一些莫名其妙的问题，可以先执行<code>hexo clean</code>来清理一下public的内容，然后再来重新生成和发布。<br>首先，ssh key肯定要配置好。</p>
+<p>其次，配置_config.yml中有关deploy的部分：</p>
+<p>正确写法：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:liuxianan/liuxianan.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p>错误写法：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: github</span><br><span class="line">  repository: https://github.com/liuxianan/liuxianan.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p>后面一种写法是hexo2.x的写法，现在已经不行了，无论是哪种写法，此时直接执行<code>hexo d</code>的话一般会报如下错误：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Deployer not found: github 或者 Deployer not found: git</span><br></pre></td></tr></table></figure>
+<p>原因是还需要安装一个插件：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>其它命令不确定，部署这个命令一定要用git bash，否则会提示<code>Permission denied (publickey).</code></p>
+<p>打开Github 在库中的README添加你的网站地址.</p>
+<p>打开你的git bash，输入<code>hexo d</code>就会将本次有改动的代码全部提交，没有改动的不会：</p>
+
+
+	  </div>
+
+
+	<div class="post-footer">    
+
+  
+
+
+
+
+<span class="donate-btn iconfont icon-donate "></span>
+
+
+<div id="donate-box" class="sildeUpMin">
+
+	<span class="donate-cancel iconfont icon-cancel"></span>
+
+	<div class="donate-img-box">
+		<img id="donate-qr-wechat" class="donate-img no-gallery" src="/img/donate1.jpg"  alt="Lost">	
+		<img id="donate-qr-alipay" class="donate-img no-gallery" src="/img/donate2.jpg"  alt="Lost">	
+	</div>
+
+	<span class="donate-word">谢谢支持</span>
+
+	<div class="donate-list">
+		<span class="iconfont icon-donate-wechat"></span>
+		<span class="iconfont icon-donate-alipay"></span>
+	</div>
+
+</div>
+
+ 
+  
+	
+<script id="-mob-share" src="https://f1.webshare.mob.com/code/mob-share.js?appkey=21d601593a1de"></script>
+	
+	<span class="share-btn iconfont icon-share">
+	</span>
+
+
+	<div class="-mob-share sildeUpMin">
+		                  
+            <span class="iconfont  icon-share-qq -mob-share-qq" title="qq"></span>
+     	                  
+            <span class="iconfont  icon-share-weixin -mob-share-weixin" title="weixin"></span>
+     	                  
+            <span class="iconfont  icon-share-weibo -mob-share-weibo" title="weibo"></span>
+     	                  
+            <span class="iconfont  icon-share-douban -mob-share-douban" title="douban"></span>
+     	                  
+            <span class="iconfont  icon-share-facebook -mob-share-facebook" title="facebook"></span>
+     	                  
+            <span class="iconfont  icon-share-twitter -mob-share-twitter" title="twitter"></span>
+     	                  
+            <span class="iconfont  icon-share-google -mob-share-google" title="google"></span>
+     	   
+	</div>
+	
+
+
+
+   <nav class="post-nav">
+
+      
+       
+
+         
+
+      
+          <a href="/2021/09/24/2021-9-24GDP/">          
+
+            <span title="GDP = C+I+G+(X-M)">  上一篇 </span>
+
+          </a>
+    
+      
+    
+      
+
+         
+
+          <a href="/2021/08/13/2021-8-13%E5%87%AF%E5%88%A9%E5%85%AC%E5%BC%8F/">         
+
+           <span title="凯利公式">下一篇 </span>  
+
+          </a>
+
+      
+
+  </nav>  
+</div>
+	
+
+<div id="comment">   
+</div>
+
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine@v1.1.8-beta/dist/Valine.min.js'></script>
+
+
+<script>
+    new Valine({
+    el: '#comment',
+    notify:false, 
+    verify:false, 
+    app_id: 'ewOYpsuWTba89mW5GlnNGnqx-gzGzoHsz',
+    app_key: 'vkIuAOR4YeIygm8PxEmSheuQ',  
+    path:window.location.pathname, 
+    avatar:'mm' ,
+    guest_info:['nick','mail']
+    });
+</script>
+
+
+
+
+
+<style type="text/css">
+
+</style>
+
+
+<script>
+//set the placeholder
+$(function(){    
+
+    $('.vnick').attr('placeholder','昵称');
+    $('.veditor').attr('placeholder','说点什么吧');
+    $('.vmail').attr('placeholder','邮箱');   
+    $('.vsubmit').html('回复');   
+   
+})  
+</script>
+
+
+
+</article>
+
+
+
+<div id="toc" >		
+
+	<div class="toc-container">	
+
+	<span class="toc-contents iconfont icon-open"" onclick="change()"> 
+	<span>目录</span>
+	</span>
+
+	<ul class="toc-list"></ul>
+
+	</div>
+
+</div>
+
+
+
+<script src="/js/toc.js"></script>
+
+
+<script src="/js/post.js"></script>
+
+</section>
+
+    </div>
+
+
+    <div class="mask"> </div>
+    <div class="back-to-top iconfont icon-backtotop fadeIn"></div>
+
+    
+
+
+
+<script src="/js/search.js"></script>
+     
+          
+          <div class="search-container sildeUpMin">
+            <input type="text" placeholder="输入你想搜索的" id="search-input" class="search-input">  
+              <span class="search-cancel iconfont icon-cancel"></span>
+              <div id="search-result" class="search-result"></div>
+          </div>
+ 
+
+     <div class="mobile-menu">      
+
+      
+      <img class="mobile-menu-icon no-gallery" src= /img/favicon.ico >   
+      
+
+         
+            
+
+            <a class="mobile-menu-link" href="/">首页
+            </a>
+            
+         
+            
+
+            <a class="mobile-menu-link" href="/archives">归档
+            </a>
+            
+         
+            
+
+            <a class="mobile-menu-link" href="/categories">分类
+            </a>
+            
+         
+            
+
+            <a class="mobile-menu-link" href="/tags">标签
+            </a>
+            
+         
+            
+
+            <a class="mobile-menu-link" href="/music">音乐
+            </a>
+            
+         
+            
+
+            <a class="mobile-menu-link" href="/about">关于
+            </a>
+            
+         
+                          
+
+            <a class="mobile-menu-link mobile-menu-search" href="#">搜索 </a>                 
+            
+         
+</div>
+    
+
+<footer id="footer">
+
+   	 <div>
+	   	 
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+			     <span class="iconfont icon-pv"></span>
+			     <span id="busuanzi_value_site_pv"></span>
+
+			     <span class="iconfont icon-uv"></span>
+			     <span id="busuanzi_value_site_uv"></span>
+		 
+   	 </div>
+
+
+	 <div>
+	 	&copy;
+		2025
+
+
+	 </div>
+
+
+
+   	 <div>
+
+	 <a href="http://www.pixelcoffee9.com" target="_blank">栖木</a>
+
+	 From Alan
+
+
+	 </div>
+
+
+
+
+
+</footer>
+
+    
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?988462ad37317c8b6f18bbf2e3b5655a";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+
+
+  </body>
+  
+<script src="/js/animation.js"></script>
+
+</html>

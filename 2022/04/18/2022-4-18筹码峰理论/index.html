@@ -1,0 +1,488 @@
+                                                               <!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport"content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes"/>
+  
+  
+  <title>  筹码峰理论 |   栖木</title>
+
+
+  
+    <link rel="icon" href="/img/favicon.ico">
+  
+
+
+  <!-- css -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!-- Jquery -->
+  
+<script src="//cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Add fancyBox -->
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css">
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
+
+  
+<script src="/js/gallery.js"></script>
+
+  <!-- javascript -->
+  
+<script src="/js/mobile.js"></script>
+
+  
+<script src="/js/utils.js"></script>
+
+  
+<script src="/js/script.js"></script>
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+  <body>
+    <header class="header">
+	
+  <nav class="header-nav">       
+	
+  	<span class="iconfont icon-menu mobile-toggle"></span>  
+
+    <a class="header-logo" href="/"><span>栖木</a>  
+
+    <div class="header-menu">          
+              
+            
+
+              <a class="header-menu-link" id="header-menu-home" href="/">首页</a>     
+
+            
+            
+            
+
+              <a class="header-menu-link" id="header-menu-archives" href="/archives">归档</a>     
+
+            
+            
+            
+
+              <a class="header-menu-link" id="header-menu-categories" href="/categories">分类</a>     
+
+            
+            
+            
+
+              <a class="header-menu-link" id="header-menu-tags" href="/tags">标签</a>     
+
+            
+            
+            
+
+              <a class="header-menu-link" id="header-menu-music" href="/music">音乐</a>     
+
+            
+            
+            
+
+              <a class="header-menu-link" id="header-menu-about" href="/about">关于</a>     
+
+            
+            
+            
+
+              <a class="iconfont icon-menu-search header-menu-link" id="header-menu-search"></a>
+
+            
+                
+    </div>  
+    
+  </nav>
+</header>
+
+    <div class="container">
+
+        
+
+          <section id="main">
+
+        
+
+        <article class="post">
+
+
+	<div class="post-header slideDownMin center">
+
+	<span class="post-title">	
+		筹码峰理论
+	</span>
+
+	
+	<div class="post-info">
+
+		<time class="post-time"><span class="iconfont icon-date"></span>
+		2022/04/18 	
+		</time>
+		
+					
+
+				<span class="post-meta">		
+				<span class="iconfont icon-category"></span>
+				<a class="category-link" href="/categories/%E4%BA%A4%E6%98%93/">交易</a>
+				</span>
+		
+			
+
+		
+				
+				<span class="post-meta">
+				<span class="iconfont icon-tag"></span>
+				<a class="tag-none-link" href="/tags/%E6%8C%87%E6%A0%87/" rel="tag">指标</a> <a class="tag-none-link" href="/tags/%E9%87%91%E8%9E%8D/" rel="tag">金融</a>
+				</span>			
+			
+
+
+		
+
+		<span class="post-words"><span class="iconfont icon-words"></span>
+		3303
+		</span>		
+	
+	</div> 
+
+</div>
+
+
+	  <div class="post-content slideDownMin">
+
+		
+
+
+
+
+	  	<h1 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h1><p><code>筹码分布</code>就是将历史上在每个价位成交的量叠加起来，并以此来判断当前市场上所有流通股的<code>持仓成本</code>。</p>
+<span id="more"></span>
+<p>当然历史上成交中的一部分会在后面的交易日中被抛出，也就是说不能简单地将以前的成交累积到现在，而应该有一定的<code>衰减</code>。这个<code>衰减的比例</code>也就是每天的<code>换手率</code>。<br>&#42;<br>比如说，1000万的盘子，前天均价为10元，成交量为200万，也就是20%换手率；昨天以均价11元又成交300万，也就是30%换手率；那前天的200万成交量怎么样了呢？成本分析假定，前天的200万在昨天也以11元被30%换手了，那么，前天以10元成交的成交量还剩了200x(1-30%)&#x3D;140万；若今天以均价12元又成交了400万，同理可算，现在的筹码分布是：10元筹码为200x(1-30%)x(1-40%)&#x3D;84万，11元的筹码为300x(1-40%)&#x3D;180万，12元的筹码是400万。</p>
+<h2 id="上面例子作为指标缺点：仅仅只是单纯的假设每个价位换手量相同，实际上有些价位的客户没有换手比如套牢盘，比如低位建仓的。所以需要添加参数消除误差"><a href="#上面例子作为指标缺点：仅仅只是单纯的假设每个价位换手量相同，实际上有些价位的客户没有换手比如套牢盘，比如低位建仓的。所以需要添加参数消除误差" class="headerlink" title="上面例子作为指标缺点：仅仅只是单纯的假设每个价位换手量相同，实际上有些价位的客户没有换手比如套牢盘，比如低位建仓的。所以需要添加参数消除误差"></a><em>上面例子作为指标缺点：仅仅只是单纯的假设每个价位换手量相同，实际上有些价位的客户没有换手比如套牢盘，比如低位建仓的。所以需要添加参数消除误差</em></h2><h1 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h1><p>研究筹码最关键的就是研究持仓成本。一轮行情发展都是由成本转换开始的，又因成本转换而结束。什么是成本转换呢？形象地说，成本转换就是筹码搬家，是指持仓筹码由一个价位向另一个价位搬运的过程；它不仅仅是股价的转换，更重要的是持仓筹码数量的转换。股票的走势在表象上体现了股价的变化，而其内在的本质却体现了持仓成本的转换。要理解这一点，就必须对一轮行情进行过程分析。  可以说，一轮行情的跌宕起伏是与庄家的行为密不可分的。庄家行为最本质的体现是对做庄股票持仓成本的控制。如同商品交易，从低价位买进，在高价位卖出，才会产生利润。庄家的行为与商品交易有相同之处，但决不是简单的类似；它比商品交易的低买高卖有着更加丰富的内涵，它是庄家行为和市场行为的高度体现。</p>
+<p>一轮行情主要由三个阶段构成：<code>吸筹</code>阶段、<code>拉升</code>阶段和<code>派发</code>阶段。 </p>
+<p><code>吸筹</code>阶段的主要任务是<code>在低位大量买进股票</code>。吸筹是否充分，庄家持仓量的多少对其做盘有着极为重要的意义：</p>
+<blockquote>
+<p>其一、持仓量决定了其利润量；筹码越多，利润实现量越大；<br>其二、持仓量决定了其控盘程度；吸筹筹码越多，市场筹码越少，庄家对股票的控制能力越强。同时，在吸筹阶段也常伴随着洗盘过程，迫使上一轮行情高位套牢者不断地割肉出局，庄家才能在低位吸筹承接。</p>
+</blockquote>
+<p>其实，庄家吸筹的过程就是一个筹码换手的过程；在这个过程中，庄家为买方，股民为卖方。只有在低位充分完成了筹码换手，吸筹阶段才会结束，发动上攻行情的条件才趋于成熟。庄家的吸筹区域就是其持有股票的成本区域。<br><code>拉升</code>阶段的主要任务是<code>使股价脱离庄家吸筹成本区</code>，打开利润空间。在此过程中，庄家用部分筹码打压做盘，同时又承接抛压筹码，但其大部分筹码仍按兵不动地留在了吸筹区域，等待高位卖出。在拉升过程中，部分股民纷纷追涨，同时部分股民获利回吐；对于做庄技巧较好的庄家，如有大势的配合，庄家只需点上一把火，拉升<code>工作主要由股民自行完成</code>的；其间，庄家主要利用<code>控盘能力调控拉升节奏</code>。在拉升阶段，成交异常活跃，筹码加速转手，各价位的成本分布大小不一。<br><code>派发</code>阶段的主要任务是<code>卖出持仓筹码</code>，实现做庄利润。股价经拉升脱离成本区达到庄家的赢利区域，庄家高位出货的可能性不断增大；随着高位换手的充分，拉升前的低位筹码被上移至高位。而当低位筹码搬家工作完成之时，庄家出货工作也宣告完成；一轮下跌行情了随之降临。<br><code>如何有效地测定现阶段持仓成本的分布状况，是进行成本分析的关键所在</code>。</p>
+<h2 id="在一轮行情的流程中要充分重视二个概念：低位充分换手和高位充分换手。低位充分换手是吸筹阶段完成的标志；高位充分换手是派发阶段完成的标志。它们是拉升和派发的充分必要条件。所谓充分换手就是在一定的价格区域成交高度密集，使分散在各价位上的筹码充分集中在一个主要的价格区域。总之，任何一轮情都是由高位换手到低位换手，再由低位换手到高位换手；这种成本转换的过程不仅是利润实现的过程，也是割肉亏损的过程，从而形成了股票走势的全部历史。这里我们特别讲解一种独特的指标：移动成本分布。该指标通过对股票成交换手的动态分析和研究，透视出股票成本转换的全过程，并形象地标明股票不同时间段不同价位持仓筹码的分布量和变化情况。确切地说它不能称之为指标，因为它没有指标那种确切性，没有指标的交叉、背离及数值信号，它却能以其独特的方式向人们展示股票的成本分布事实，然而这种事实的展示无疑对庄家构成了威胁，却能使投资者有效地研判股票的成本结构，并以此指导自已的实战操作。移动成本分布的移动特性在于，可以选择任意交易日作为测试成本分布的基准点，形象直观地透视出相对于这个测试基准点股票的筹码分布状况；此外，通过不断移动改变测试基准点，动态地透视出各价位持仓量的增减变化，从而全面地透视成本转换的全过程。-移动成本分布的独特之处在于强大的透视性，它可以形象而直观地显示股票的成本结构，并将每一个阶段的持仓成本分布变化毫无保留地展示在我们的面前。如下图所示1、低位吸筹状态。2、高位派发状态。火焰山：如下图所示，显示了N日前的成本分布，显示的色彩是由大红色到金黄色，时间越短，颜色越红，时间越长，颜色越黄。需要特别指出的是，由于各个时间段的筹码叠加的原因，所以其色彩图也是叠加的。暗黄色代表100天之前产生的筹码分布。-淡黄色代表60天之前产生的筹码分布。-蓝色代表30天之前产生的筹码分布。-暗绿色代表20天之前产生的筹码分布。-绿色代表10天前至前20日之间产生的筹码分布。-红色代表1天前至前10日之间产生的筹码分布。-柱状图代表当天最新产生的筹码分布。-一般较小，不容易看见，只有在比较极端的情况下才会较明显。-这样我们就能更加真实地了解到筹码的沉淀状态和活跃程度。完全揭示了庄家吸筹、拉升、派发的整个过程。"><a href="#在一轮行情的流程中要充分重视二个概念：低位充分换手和高位充分换手。低位充分换手是吸筹阶段完成的标志；高位充分换手是派发阶段完成的标志。它们是拉升和派发的充分必要条件。所谓充分换手就是在一定的价格区域成交高度密集，使分散在各价位上的筹码充分集中在一个主要的价格区域。总之，任何一轮情都是由高位换手到低位换手，再由低位换手到高位换手；这种成本转换的过程不仅是利润实现的过程，也是割肉亏损的过程，从而形成了股票走势的全部历史。这里我们特别讲解一种独特的指标：移动成本分布。该指标通过对股票成交换手的动态分析和研究，透视出股票成本转换的全过程，并形象地标明股票不同时间段不同价位持仓筹码的分布量和变化情况。确切地说它不能称之为指标，因为它没有指标那种确切性，没有指标的交叉、背离及数值信号，它却能以其独特的方式向人们展示股票的成本分布事实，然而这种事实的展示无疑对庄家构成了威胁，却能使投资者有效地研判股票的成本结构，并以此指导自已的实战操作。移动成本分布的移动特性在于，可以选择任意交易日作为测试成本分布的基准点，形象直观地透视出相对于这个测试基准点股票的筹码分布状况；此外，通过不断移动改变测试基准点，动态地透视出各价位持仓量的增减变化，从而全面地透视成本转换的全过程。-移动成本分布的独特之处在于强大的透视性，它可以形象而直观地显示股票的成本结构，并将每一个阶段的持仓成本分布变化毫无保留地展示在我们的面前。如下图所示1、低位吸筹状态。2、高位派发状态。火焰山：如下图所示，显示了N日前的成本分布，显示的色彩是由大红色到金黄色，时间越短，颜色越红，时间越长，颜色越黄。需要特别指出的是，由于各个时间段的筹码叠加的原因，所以其色彩图也是叠加的。暗黄色代表100天之前产生的筹码分布。-淡黄色代表60天之前产生的筹码分布。-蓝色代表30天之前产生的筹码分布。-暗绿色代表20天之前产生的筹码分布。-绿色代表10天前至前20日之间产生的筹码分布。-红色代表1天前至前10日之间产生的筹码分布。-柱状图代表当天最新产生的筹码分布。-一般较小，不容易看见，只有在比较极端的情况下才会较明显。-这样我们就能更加真实地了解到筹码的沉淀状态和活跃程度。完全揭示了庄家吸筹、拉升、派发的整个过程。" class="headerlink" title="在一轮行情的流程中要充分重视二个概念：低位充分换手和高位充分换手。低位充分换手是吸筹阶段完成的标志；高位充分换手是派发阶段完成的标志。它们是拉升和派发的充分必要条件。所谓充分换手就是在一定的价格区域成交高度密集，使分散在各价位上的筹码充分集中在一个主要的价格区域。总之，任何一轮情都是由高位换手到低位换手，再由低位换手到高位换手；这种成本转换的过程不仅是利润实现的过程，也是割肉亏损的过程，从而形成了股票走势的全部历史。这里我们特别讲解一种独特的指标：移动成本分布。该指标通过对股票成交换手的动态分析和研究，透视出股票成本转换的全过程，并形象地标明股票不同时间段不同价位持仓筹码的分布量和变化情况。确切地说它不能称之为指标，因为它没有指标那种确切性，没有指标的交叉、背离及数值信号，它却能以其独特的方式向人们展示股票的成本分布事实，然而这种事实的展示无疑对庄家构成了威胁，却能使投资者有效地研判股票的成本结构，并以此指导自已的实战操作。移动成本分布的移动特性在于，可以选择任意交易日作为测试成本分布的基准点，形象直观地透视出相对于这个测试基准点股票的筹码分布状况；此外，通过不断移动改变测试基准点，动态地透视出各价位持仓量的增减变化，从而全面地透视成本转换的全过程。  移动成本分布的独特之处在于强大的透视性，它可以形象而直观地显示股票的成本结构，并将每一个阶段的持仓成本分布变化毫无保留地展示在我们的面前。如下图所示1、低位吸筹状态。2、高位派发状态。火焰山：如下图所示，显示了N日前的成本分布，显示的色彩是由大红色到金黄色，时间越短，颜色越红，时间越长，颜色越黄。需要特别指出的是，由于各个时间段的筹码叠加的原因，所以其色彩图也是叠加的。暗黄色代表100天之前产生的筹码分布。 淡黄色代表60天之前产生的筹码分布。 蓝色代表30天之前产生的筹码分布。 暗绿色代表20天之前产生的筹码分布。 绿色代表10天前至前20日之间产生的筹码分布。 红色代表1天前至前10日之间产生的筹码分布。 柱状图代表当天最新产生的筹码分布。(一般较小，不容易看见，只有在比较极端的情况下才会较明显。)这样我们就能更加真实地了解到筹码的沉淀状态和活跃程度。完全揭示了庄家吸筹、拉升、派发的整个过程。"></a>在一轮行情的流程中要充分重视二个概念：低位充分换手和高位充分换手。<br><code>低位充分换手是吸筹阶段完成的标志</code>；<code>高位充分换手是派发阶段完成的标志</code>。它们是拉升和派发的<code>充分必要条件</code>。所谓充分换手就是在一定的价格区域成交高度密集，使分散在各价位上的筹码充分集中在一个主要的价格区域。总之，任何一轮情都是由高位换手到低位换手，再由低位换手到高位换手；这种成本转换的过程不仅是利润实现的过程，也是割肉亏损的过程，从而形成了股票走势的全部历史。<br>这里我们特别讲解一种独特的指标：<code>移动成本分布</code>。该指标通过对股票成交换手的动态分析和研究，透视出股票成本转换的全过程，并形象地标明股票不同时间段不同价位持仓筹码的分布量和变化情况。确切地说它不能称之为指标，因为它没有指标那种确切性，没有指标的交叉、背离及数值信号，它却能以其独特的方式向人们展示股票的成本分布事实，然而这种事实的展示无疑对庄家构成了威胁，却能使投资者有效地研判股票的成本结构，并以此指导自已的实战操作。移动成本分布的移动特性在于，可以选择任意交易日作为测试成本分布的基准点，形象直观地透视出相对于这个测试基准点股票的筹码分布状况；此外，通过不断移动改变测试基准点，动态地透视出各价位持仓量的增减变化，从而全面地透视成本转换的全过程。  移动成本分布的独特之处在于强大的透视性，它可以形象而直观地显示股票的成本结构，并将每一个阶段的持仓成本分布变化毫无保留地展示在我们的面前。<br>如下图所示<br>1、低位吸筹状态。<br><img src="/2022/04/18/2022-4-18%E7%AD%B9%E7%A0%81%E5%B3%B0%E7%90%86%E8%AE%BA/0.png" alt="栖木"><br>2、高位派发状态。<br><img src="/2022/04/18/2022-4-18%E7%AD%B9%E7%A0%81%E5%B3%B0%E7%90%86%E8%AE%BA/1.png" alt="栖木"><br>火焰山：如下图所示，显示了N日前的成本分布，显示的色彩是由大红色到金黄色，时间越短，颜色越红，时间越长，颜色越黄。需要特别指出的是，由于各个时间段的筹码叠加的原因，所以其色彩图也是叠加的。<br><img src="/2022/04/18/2022-4-18%E7%AD%B9%E7%A0%81%E5%B3%B0%E7%90%86%E8%AE%BA/2.png" alt="栖木"><br>暗黄色代表100天之前产生的筹码分布。 淡黄色代表60天之前产生的筹码分布。 蓝色代表30天之前产生的筹码分布。 暗绿色代表20天之前产生的筹码分布。 绿色代表10天前至前20日之间产生的筹码分布。 红色代表1天前至前10日之间产生的筹码分布。 柱状图代表当天最新产生的筹码分布。(一般较小，不容易看见，只有在比较极端的情况下才会较明显。)<br>这样我们就能更加真实地了解到筹码的沉淀状态和活跃程度。完全揭示了庄家吸筹、拉升、派发的整个过程。</h2><h1 id="修改同花顺CM函数"><a href="#修改同花顺CM函数" class="headerlink" title="修改同花顺CM函数"></a>修改同花顺CM函数</h1><p>含义：用于画筹码成交分布云。<br>例如：CM(0,1,2,0,1000,1,0,0,0,1)<br>参数含义：</p>
+<ol>
+<li>计算总天数：0表示计算全部天数。</li>
+<li>当日成本算法：平均分布为0，三角分布为1。</li>
+<li>精度：一般是2。</li>
+<li>起始位置：0是从当天开始计算,1是从前一天开始算,类推。</li>
+<li>换手：默认为100000%换手。</li>
+<li>计算方式：按成交量计算为1，按成交金额计算为2。</li>
+<li>筹码计算价格限制的最大值：默认为0。</li>
+<li>筹码计算价格限制的最小值：默认为0。</li>
+<li>功能切换：0表示筹码分布和火焰山（自定义天数前的筹码云），1表示活跃度（自定义天数内的筹码云）。</li>
+<li>历史换手衰减系数：默认为1，可取0.1~10之间的数值。</li>
+</ol>
+<h2 id="历史衰减换手系数"><a href="#历史衰减换手系数" class="headerlink" title="历史衰减换手系数"></a>历史衰减换手系数</h2><p>讲这个概念之前，我们先分享两个股票的基本概念。股票上市时分为<code>流通股</code>和<code>非解禁的股票</code>。<br>为什么股票会分为解禁和非解禁呢？在A股市场中，经常会存在这种现象，也就是大股东清仓式减持，试想下，公司的创始股东就己经开始清 仓式减持，那么后续公司的前景可想而知。所以，为了保护中小投资者，防上股票一上市就有人高位套现，所以股票刚上市时，大股东的股份是非解葵的，也就是卖不了。这部分股份会每年解禁一部分。这样就可以有效避免大股东套现。<br>在筹码系统中，只对流通盘的股票进行研究。<br>但是流通盘的股票也会有所不同，我们都知道，每一支股票都有大股东，甚全有的股票大股东占比甚至超过了90%，有的股票十大流通股东占比只有10%不到，正是由于不同股票的沉通股东占比不同，所以，筹码系统，只能按照每个上市公司没有大股东，所有流通盘的股票都可以买卖，夹进行筹码统计。<br>但是，实际上不是这样的，占比超过90%的股票，实际上流通盘，只有10%，也就是假如流道股本10亿的话，只有1亿能够买到，所以这个时候的筹码就是错误的，必须进行历史换手衰减系数的调整，对筹码进行优化。这就是历史换手衰减系数的来源。其计算方法为：<code>历史衰减换手系数=1/(1-十大流通股东占比)</code>。那么假如十大流通股东古比90%的股票，衰减系数就是10，相当手筹码的移动速度放大了10倍，那么筹码分布情况，会有很大不同。</p>
+<p>如果一只股票十大流通股东占比超过30%，就有必要修改指标，低于30%没必要，影响不大。</p>
+
+
+	  </div>
+
+
+	<div class="post-footer">    
+
+  
+
+
+
+
+<span class="donate-btn iconfont icon-donate "></span>
+
+
+<div id="donate-box" class="sildeUpMin">
+
+	<span class="donate-cancel iconfont icon-cancel"></span>
+
+	<div class="donate-img-box">
+		<img id="donate-qr-wechat" class="donate-img no-gallery" src="/img/donate1.jpg"  alt="Lost">	
+		<img id="donate-qr-alipay" class="donate-img no-gallery" src="/img/donate2.jpg"  alt="Lost">	
+	</div>
+
+	<span class="donate-word">谢谢支持</span>
+
+	<div class="donate-list">
+		<span class="iconfont icon-donate-wechat"></span>
+		<span class="iconfont icon-donate-alipay"></span>
+	</div>
+
+</div>
+
+ 
+  
+	
+<script id="-mob-share" src="https://f1.webshare.mob.com/code/mob-share.js?appkey=21d601593a1de"></script>
+	
+	<span class="share-btn iconfont icon-share">
+	</span>
+
+
+	<div class="-mob-share sildeUpMin">
+		                  
+            <span class="iconfont  icon-share-qq -mob-share-qq" title="qq"></span>
+     	                  
+            <span class="iconfont  icon-share-weixin -mob-share-weixin" title="weixin"></span>
+     	                  
+            <span class="iconfont  icon-share-weibo -mob-share-weibo" title="weibo"></span>
+     	                  
+            <span class="iconfont  icon-share-douban -mob-share-douban" title="douban"></span>
+     	                  
+            <span class="iconfont  icon-share-facebook -mob-share-facebook" title="facebook"></span>
+     	                  
+            <span class="iconfont  icon-share-twitter -mob-share-twitter" title="twitter"></span>
+     	                  
+            <span class="iconfont  icon-share-google -mob-share-google" title="google"></span>
+     	   
+	</div>
+	
+
+
+
+   <nav class="post-nav">
+
+      
+       
+
+         
+
+      
+          <a href="/2022/04/30/2022-4-30%E8%82%A1%E7%A5%A8%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%9D%90%E6%A0%87%E4%BD%BF%E7%94%A8/">          
+
+            <span title="股票软件的坐标使用">  上一篇 </span>
+
+          </a>
+    
+      
+    
+      
+
+         
+
+          <a href="/2022/04/10/2022-4-1012%E4%B8%AA%E4%B9%92%E4%B9%93%E7%90%83/">         
+
+           <span title="12个乒乓球">下一篇 </span>  
+
+          </a>
+
+      
+
+  </nav>  
+</div>
+	
+
+<div id="comment">   
+</div>
+
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine@v1.1.8-beta/dist/Valine.min.js'></script>
+
+
+<script>
+    new Valine({
+    el: '#comment',
+    notify:false, 
+    verify:false, 
+    app_id: 'ewOYpsuWTba89mW5GlnNGnqx-gzGzoHsz',
+    app_key: 'vkIuAOR4YeIygm8PxEmSheuQ',  
+    path:window.location.pathname, 
+    avatar:'mm' ,
+    guest_info:['nick','mail']
+    });
+</script>
+
+
+
+
+
+<style type="text/css">
+
+</style>
+
+
+<script>
+//set the placeholder
+$(function(){    
+
+    $('.vnick').attr('placeholder','昵称');
+    $('.veditor').attr('placeholder','说点什么吧');
+    $('.vmail').attr('placeholder','邮箱');   
+    $('.vsubmit').html('回复');   
+   
+})  
+</script>
+
+
+
+</article>
+
+
+
+<div id="toc" >		
+
+	<div class="toc-container">	
+
+	<span class="toc-contents iconfont icon-open"" onclick="change()"> 
+	<span>目录</span>
+	</span>
+
+	<ul class="toc-list"></ul>
+
+	</div>
+
+</div>
+
+
+
+<script src="/js/toc.js"></script>
+
+
+<script src="/js/post.js"></script>
+
+</section>
+
+    </div>
+
+
+    <div class="mask"> </div>
+    <div class="back-to-top iconfont icon-backtotop fadeIn"></div>
+
+    
+
+
+
+<script src="/js/search.js"></script>
+     
+          
+          <div class="search-container sildeUpMin">
+            <input type="text" placeholder="输入你想搜索的" id="search-input" class="search-input">  
+              <span class="search-cancel iconfont icon-cancel"></span>
+              <div id="search-result" class="search-result"></div>
+          </div>
+ 
+
+     <div class="mobile-menu">      
+
+      
+      <img class="mobile-menu-icon no-gallery" src= /img/favicon.ico >   
+      
+
+         
+            
+
+            <a class="mobile-menu-link" href="/">首页
+            </a>
+            
+         
+            
+
+            <a class="mobile-menu-link" href="/archives">归档
+            </a>
+            
+         
+            
+
+            <a class="mobile-menu-link" href="/categories">分类
+            </a>
+            
+         
+            
+
+            <a class="mobile-menu-link" href="/tags">标签
+            </a>
+            
+         
+            
+
+            <a class="mobile-menu-link" href="/music">音乐
+            </a>
+            
+         
+            
+
+            <a class="mobile-menu-link" href="/about">关于
+            </a>
+            
+         
+                          
+
+            <a class="mobile-menu-link mobile-menu-search" href="#">搜索 </a>                 
+            
+         
+</div>
+    
+
+<footer id="footer">
+
+   	 <div>
+	   	 
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+			     <span class="iconfont icon-pv"></span>
+			     <span id="busuanzi_value_site_pv"></span>
+
+			     <span class="iconfont icon-uv"></span>
+			     <span id="busuanzi_value_site_uv"></span>
+		 
+   	 </div>
+
+
+	 <div>
+	 	&copy;
+		2025
+
+
+	 </div>
+
+
+
+   	 <div>
+
+	 <a href="http://www.pixelcoffee9.com" target="_blank">栖木</a>
+
+	 From Alan
+
+
+	 </div>
+
+
+
+
+
+</footer>
+
+    
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?988462ad37317c8b6f18bbf2e3b5655a";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+
+
+  </body>
+  
+<script src="/js/animation.js"></script>
+
+</html>

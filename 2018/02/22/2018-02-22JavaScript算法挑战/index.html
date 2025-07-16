@@ -1,0 +1,496 @@
+                                                               <!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport"content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes"/>
+  
+  
+  <title>  JavaScript算法挑战 |   栖木</title>
+
+
+  
+    <link rel="icon" href="/img/favicon.ico">
+  
+
+
+  <!-- css -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!-- Jquery -->
+  
+<script src="//cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Add fancyBox -->
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css">
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
+
+  
+<script src="/js/gallery.js"></script>
+
+  <!-- javascript -->
+  
+<script src="/js/mobile.js"></script>
+
+  
+<script src="/js/utils.js"></script>
+
+  
+<script src="/js/script.js"></script>
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+  <body>
+    <header class="header">
+	
+  <nav class="header-nav">       
+	
+  	<span class="iconfont icon-menu mobile-toggle"></span>  
+
+    <a class="header-logo" href="/"><span>栖木</a>  
+
+    <div class="header-menu">          
+              
+            
+
+              <a class="header-menu-link" id="header-menu-home" href="/">首页</a>     
+
+            
+            
+            
+
+              <a class="header-menu-link" id="header-menu-archives" href="/archives">归档</a>     
+
+            
+            
+            
+
+              <a class="header-menu-link" id="header-menu-categories" href="/categories">分类</a>     
+
+            
+            
+            
+
+              <a class="header-menu-link" id="header-menu-tags" href="/tags">标签</a>     
+
+            
+            
+            
+
+              <a class="header-menu-link" id="header-menu-music" href="/music">音乐</a>     
+
+            
+            
+            
+
+              <a class="header-menu-link" id="header-menu-about" href="/about">关于</a>     
+
+            
+            
+            
+
+              <a class="iconfont icon-menu-search header-menu-link" id="header-menu-search"></a>
+
+            
+                
+    </div>  
+    
+  </nav>
+</header>
+
+    <div class="container">
+
+        
+
+          <section id="main">
+
+        
+
+        <article class="post">
+
+
+	<div class="post-header slideDownMin center">
+
+	<span class="post-title">	
+		JavaScript算法挑战
+	</span>
+
+	
+	<div class="post-info">
+
+		<time class="post-time"><span class="iconfont icon-date"></span>
+		2018/02/22 	
+		</time>
+		
+					
+
+				<span class="post-meta">		
+				<span class="iconfont icon-category"></span>
+				<a class="category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a>
+				</span>
+		
+			
+
+		
+				
+				<span class="post-meta">
+				<span class="iconfont icon-tag"></span>
+				<a class="tag-none-link" href="/tags/JavaScript/" rel="tag">JavaScript</a> <a class="tag-none-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a>
+				</span>			
+			
+
+
+		
+
+		<span class="post-words"><span class="iconfont icon-words"></span>
+		5546
+		</span>		
+	
+	</div> 
+
+</div>
+
+
+	  <div class="post-content slideDownMin">
+
+		
+
+
+
+
+	  	<!--top-->
+<h1 id="freecodecamp中的算法挑战"><a href="#freecodecamp中的算法挑战" class="headerlink" title="freecodecamp中的算法挑战."></a>freecodecamp中的算法挑战.</h1><h2 id="1-先把字符串转化成数组，再借助数组的reverse方法翻转数组顺序，最后把数组转化成字符串。"><a href="#1-先把字符串转化成数组，再借助数组的reverse方法翻转数组顺序，最后把数组转化成字符串。" class="headerlink" title="1.先把字符串转化成数组，再借助数组的reverse方法翻转数组顺序，最后把数组转化成字符串。"></a>1.先把字符串转化成数组，再借助数组的reverse方法翻转数组顺序，最后把数组转化成字符串。</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">reverseString</span>(<span class="params">str</span>) &#123;</span><br><span class="line">  <span class="comment">// 请把你的代码写在这里</span></span><br><span class="line">  <span class="keyword">var</span> a = [];</span><br><span class="line">  a = str.<span class="title function_">split</span>(<span class="string">&#x27;&#x27;</span>);</span><br><span class="line">  a.<span class="title function_">reverse</span>();</span><br><span class="line">  str =a.<span class="title function_">join</span>(<span class="string">&#x27;&#x27;</span>);</span><br><span class="line">  <span class="keyword">return</span> str;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">reverseString</span>(<span class="string">&quot;hello&quot;</span>);</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<h2 id="2-检查回文字符串"><a href="#2-检查回文字符串" class="headerlink" title="2.检查回文字符串"></a>2.检查回文字符串</h2><p>如果给定的字符串是回文，返回true，反之，返回false。<br>如果一个字符串忽略标点符号、大小写和空格，正着读和反着读一模一样，那么这个字符串就是palindrome(回文)。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">palindrome</span>(<span class="params">str</span>) &#123;</span><br><span class="line">  <span class="comment">// 请把你的代码写在这里</span></span><br><span class="line">  </span><br><span class="line">  <span class="keyword">var</span> a = str.<span class="title function_">replace</span>(<span class="regexp">/[\W\s_]/g</span>,<span class="string">&quot;&quot;</span>).<span class="title function_">toLowerCase</span>();</span><br><span class="line">  <span class="keyword">var</span> b = a.<span class="title function_">split</span>(<span class="string">&quot;&quot;</span>).<span class="title function_">reverse</span>().<span class="title function_">join</span>(<span class="string">&quot;&quot;</span>);</span><br><span class="line">  <span class="keyword">if</span>(a==b)&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">true</span>;      </span><br><span class="line">  &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">   <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">palindrome</span>(<span class="string">&quot;eye&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="title function_">confirmEnding</span>(<span class="string">&quot;Bastian&quot;</span>, <span class="string">&quot;n&quot;</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="3-找出最长单词"><a href="#3-找出最长单词" class="headerlink" title="3.找出最长单词"></a>3.找出最长单词</h2><p>在句子中找出最长的单词，并返回它的长度。<br>函数的返回值应该是一个数字。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">findLongestWord</span>(<span class="params">str</span>) &#123;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">// 请把你的代码写在这里</span></span><br><span class="line">  str = str.<span class="title function_">split</span>(<span class="string">&quot; &quot;</span>);</span><br><span class="line">  <span class="comment">//冒泡排序</span></span><br><span class="line">  <span class="keyword">var</span> max = str[<span class="number">0</span>];</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">1</span> ; i &lt; str.<span class="property">length</span>; i++)&#123;</span><br><span class="line">    <span class="keyword">if</span>(max.<span class="property">length</span> &lt; str[i].<span class="property">length</span>)&#123;</span><br><span class="line">      max = str[i];</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> max.<span class="property">length</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">findLongestWord</span>(<span class="string">&quot;The quick brown fox jumped over the lazy dog&quot;</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="4-句中单词首字母大写"><a href="#4-句中单词首字母大写" class="headerlink" title="4.句中单词首字母大写"></a>4.句中单词首字母大写</h2><p>确保字符串的每个单词首字母都大写，其余部分小写。<br>像’the’和’of’这样的连接符同理。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">titleCase</span>(<span class="params">str</span>) &#123;</span><br><span class="line">  <span class="comment">// 请把你的代码写在这里</span></span><br><span class="line">  str = str.<span class="title function_">replace</span>(<span class="regexp">/\b\S+\b/g</span>, <span class="keyword">function</span>(<span class="params">word</span>)&#123;</span><br><span class="line">	<span class="keyword">return</span> word.<span class="title function_">substring</span>(<span class="number">0</span>,<span class="number">1</span>).<span class="title function_">toUpperCase</span>()+word.<span class="title function_">substring</span>(<span class="number">1</span>).<span class="title function_">toLowerCase</span>();&#125;</span><br><span class="line">	);</span><br><span class="line">  <span class="keyword">return</span> str;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">titleCase</span>(<span class="string">&quot;I&#x27;m a little tea pot&quot;</span>);</span><br></pre></td></tr></table></figure>
+<p>方法2 for+replace</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">titleCase</span>(<span class="params">str</span>) &#123;</span><br><span class="line">  <span class="comment">// 请把你的代码写在这里</span></span><br><span class="line">  str = str.<span class="title function_">toLowerCase</span>();</span><br><span class="line">  str = str.<span class="title function_">split</span>(<span class="string">&quot; &quot;</span>);</span><br><span class="line">  </span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; str.<span class="property">length</span>; i++) &#123;  </span><br><span class="line">        <span class="keyword">var</span> char = str[i].<span class="title function_">charAt</span>(<span class="number">0</span>);  </span><br><span class="line">        <span class="comment">//使用 replace()方法将数组中的每个首字母大写化  </span></span><br><span class="line">        str[i] = str[i].<span class="title function_">replace</span>(char, <span class="keyword">function</span> <span class="title function_">replace</span>(<span class="params">char</span>) &#123;  </span><br><span class="line">            <span class="keyword">return</span> char.<span class="title function_">toUpperCase</span>();  </span><br><span class="line">        &#125;);  </span><br><span class="line">    &#125;                                                </span><br><span class="line">  <span class="keyword">return</span> str.<span class="title function_">join</span>(<span class="string">&quot; &quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">titleCase</span>(<span class="string">&quot;I&#x27;m a little tea pot&quot;</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="5-找出多个数组中的最大数"><a href="#5-找出多个数组中的最大数" class="headerlink" title="5.找出多个数组中的最大数"></a>5.找出多个数组中的最大数</h2><p>右边大数组中包含了4个小数组，分别找到每个小数组中的最大值，然后把它们串联起来，形成一个新数组。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">largestOfFour</span>(<span class="params">arr</span>) &#123;</span><br><span class="line">  <span class="comment">// 请把你的代码写在这里</span></span><br><span class="line">  <span class="keyword">var</span> a = [];</span><br><span class="line">  </span><br><span class="line">   <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.<span class="property">length</span>; i++)&#123;</span><br><span class="line">     <span class="keyword">var</span> max = arr[i][<span class="number">0</span>];</span><br><span class="line">     <span class="keyword">for</span>(<span class="keyword">var</span> j = <span class="number">1</span> ; j &lt; arr[i].<span class="property">length</span>; j++)&#123;</span><br><span class="line">       <span class="keyword">if</span>(max &lt; arr[i][j])&#123;</span><br><span class="line">         max = arr[i][j]; </span><br><span class="line">        &#125;</span><br><span class="line">     &#125;</span><br><span class="line">    a.<span class="title function_">push</span>(max);</span><br><span class="line">   &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">largestOfFour</span>([[<span class="number">4</span>, <span class="number">5</span>, <span class="number">1</span>, <span class="number">3</span>], [<span class="number">13</span>, <span class="number">27</span>, <span class="number">18</span>, <span class="number">26</span>], [<span class="number">32</span>, <span class="number">35</span>, <span class="number">37</span>, <span class="number">39</span>], [<span class="number">1000</span>, <span class="number">1001</span>, <span class="number">857</span>, <span class="number">1</span>]]);</span><br></pre></td></tr></table></figure>
+<h2 id="6-检查字符串结尾"><a href="#6-检查字符串结尾" class="headerlink" title="6.检查字符串结尾"></a>6.检查字符串结尾</h2><p>判断一个字符串(str)是否以指定的字符串(target)结尾。<br>如果是，返回true;如果不是，返回false。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">confirmEnding</span>(<span class="params">str, target</span>) &#123;</span><br><span class="line">  <span class="comment">// 请把你的代码写在这里</span></span><br><span class="line">  <span class="keyword">var</span> a = target.<span class="property">length</span>;</span><br><span class="line">  <span class="keyword">if</span>(str.<span class="title function_">substr</span>(-a,a) == target)&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">true</span>;  </span><br><span class="line">  &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">false</span>;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">confirmEnding</span>(<span class="string">&quot;Bastian&quot;</span>, <span class="string">&quot;n&quot;</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="7-重复输出字符串"><a href="#7-重复输出字符串" class="headerlink" title="7.重复输出字符串"></a>7.重复输出字符串</h2><p>（重要的事情说3遍）<br>重复一个指定的字符串 num次，如果num是一个负数则返回一个空字符串。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">repeat</span>(<span class="params">str, num</span>) &#123;</span><br><span class="line">  <span class="comment">// 请把你的代码写在这里</span></span><br><span class="line">  <span class="keyword">var</span> a = <span class="string">&quot;&quot;</span>;</span><br><span class="line">  <span class="keyword">if</span> (str &lt; <span class="number">0</span>)&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">  &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i &lt; num;i++)&#123;</span><br><span class="line">    a = a.<span class="title function_">concat</span>(str);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">repeat</span>(<span class="string">&quot;abc&quot;</span>, <span class="number">3</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="8-如果字符串的长度比指定的参数num长，则把多余的部分用…来表示。"><a href="#8-如果字符串的长度比指定的参数num长，则把多余的部分用…来表示。" class="headerlink" title="8.如果字符串的长度比指定的参数num长，则把多余的部分用…来表示。"></a>8.如果字符串的长度比指定的参数num长，则把多余的部分用…来表示。</h2><p>切记，插入到字符串尾部的三个点号也会计入字符串的长度。<br>但是，如果指定的参数num小于或等于3，则添加的三个点号不会计入字符串的长度。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">truncate</span>(<span class="params">str, num</span>) &#123;</span><br><span class="line">  <span class="comment">// 请把你的代码写在这里</span></span><br><span class="line">  <span class="keyword">var</span> a = <span class="string">&quot;&quot;</span>;</span><br><span class="line">  <span class="keyword">var</span> strLen = str.<span class="property">length</span>;</span><br><span class="line">  <span class="keyword">if</span>(num &gt;= strLen)&#123;</span><br><span class="line">    a = str;</span><br><span class="line">  &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(num &lt;= <span class="number">3</span>)&#123;</span><br><span class="line">       a = str.<span class="title function_">substr</span>(<span class="number">0</span>,num).<span class="title function_">concat</span>(<span class="string">&quot;...&quot;</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">      a = str.<span class="title function_">substr</span>(<span class="number">0</span>,num-<span class="number">3</span>).<span class="title function_">concat</span>(<span class="string">&quot;...&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">truncate</span>(<span class="string">&quot;A-tisket a-tasket A green and yellow basket&quot;</span>, <span class="number">11</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="9-把一个数组arr按照指定的数组大小size分割成若干个数组块。"><a href="#9-把一个数组arr按照指定的数组大小size分割成若干个数组块。" class="headerlink" title="9.把一个数组arr按照指定的数组大小size分割成若干个数组块。"></a>9.把一个数组arr按照指定的数组大小size分割成若干个数组块。</h2><p>例如:chunk([1,2,3,4],2)&#x3D;[[1,2],[3,4]];<br>chunk([1,2,3,4,5],2)&#x3D;[[1,2],[3,4],[5]];</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">chunk</span>(<span class="params">arr, size</span>) &#123;</span><br><span class="line">  <span class="comment">// 请把你的代码写在这里</span></span><br><span class="line">  <span class="keyword">var</span> a = [];</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i &lt; arr.<span class="property">length</span>/size;i++)&#123;</span><br><span class="line">  a.<span class="title function_">push</span>(arr.<span class="title function_">slice</span>(i*size,i*size+size));</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">chunk</span>([<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>, <span class="string">&quot;d&quot;</span>], <span class="number">2</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="10-截断数组"><a href="#10-截断数组" class="headerlink" title="10.截断数组"></a>10.截断数组</h2><p>返回一个数组被截断n个元素后还剩余的元素，截断从索引0开始。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">slasher</span>(<span class="params">arr, howMany</span>) &#123;</span><br><span class="line">  <span class="comment">// 请把你的代码写在这里</span></span><br><span class="line">  arr.<span class="title function_">splice</span>(<span class="number">0</span>,howMany);</span><br><span class="line">  <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">slasher</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], <span class="number">2</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="11-比较字符串"><a href="#11-比较字符串" class="headerlink" title="11.比较字符串"></a>11.比较字符串</h2><p>（蛤蟆可以吃队友，也可以吃对手）<br>如果数组第一个字符串元素包含了第二个字符串元素的所有字符，函数返回true。<br>举例，[“hello”, “Hello”]应该返回true，因为在忽略大小写的情况下，第二个字符串的所有字符都可以在第一个字符串找到。<br>[“hello”, “hey”]应该返回false，因为字符串”hello”并不包含字符”y”。<br>[“Alien”, “line”]应该返回true，因为”line”中所有字符都可以在”Alien”找到。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">mutation</span>(<span class="params">arr</span>)&#123;</span><br><span class="line">  <span class="comment">// 请把你的代码写在这里</span></span><br><span class="line">  <span class="keyword">var</span> str1=arr[<span class="number">0</span>].<span class="title function_">toLowerCase</span>();</span><br><span class="line">  <span class="keyword">var</span> str2=arr[<span class="number">1</span>].<span class="title function_">toLowerCase</span>();</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; str2.<span class="property">length</span>; i++)&#123;</span><br><span class="line">   <span class="keyword">if</span>(str1.<span class="title function_">indexOf</span>(str2[i]) == -<span class="number">1</span>) &#123;</span><br><span class="line">     <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">   &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">mutation</span>([<span class="string">&quot;hello&quot;</span>, <span class="string">&quot;hey&quot;</span>]);</span><br></pre></td></tr></table></figure>
+<h2 id="12-过滤数组假值"><a href="#12-过滤数组假值" class="headerlink" title="12.过滤数组假值"></a>12.过滤数组假值</h2><p>（真假美猴王）<br>删除数组中的所有假值</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">bouncer</span>(<span class="params">arr</span>) &#123;</span><br><span class="line">  <span class="comment">// 请把你的代码写在这里</span></span><br><span class="line">  arr = arr.<span class="title function_">filter</span>(<span class="keyword">function</span>(<span class="params">b</span>)&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="title class_">Boolean</span>(b);</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">bouncer</span>([<span class="literal">false</span>, <span class="literal">null</span>, <span class="number">0</span>, <span class="title class_">NaN</span>, <span class="literal">undefined</span>, <span class="string">&quot;&quot;</span>]);</span><br></pre></td></tr></table></figure>
+<h2 id="13-摧毁数组"><a href="#13-摧毁数组" class="headerlink" title="13.摧毁数组"></a>13.摧毁数组</h2><p>金克斯的迫击炮！<br>实现一个摧毁(destroyer)函数，第一个参数是待摧毁的数组，其余的参数是待摧毁的值。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">destroyer</span>(<span class="params">arr</span>) &#123;</span><br><span class="line">  <span class="comment">// 请把你的代码写在这里</span></span><br><span class="line">  <span class="keyword">var</span> temp = [];</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">1</span> ; i &lt; <span class="variable language_">arguments</span>.<span class="property">length</span>;i++)&#123;</span><br><span class="line">   temp.<span class="title function_">push</span>(<span class="variable language_">arguments</span>[i]);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">var</span> a = arr.<span class="title function_">filter</span>(<span class="keyword">function</span>(<span class="params">b</span>)&#123;</span><br><span class="line">    <span class="keyword">return</span> temp.<span class="title function_">indexOf</span>(b) &lt; <span class="number">0</span>;</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">destroyer</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], <span class="number">2</span>, <span class="number">3</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="14-Where-do-I-belong"><a href="#14-Where-do-I-belong" class="headerlink" title="14.Where do I belong"></a>14.Where do I belong</h2><p>数组排序并找出元素索引<br>我身在何处？<br>先给数组排序，然后找到指定的值在数组的位置，最后返回位置对应的索引。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">where</span>(<span class="params">arr, num</span>) &#123;</span><br><span class="line">  <span class="comment">// 请把你的代码写在这里</span></span><br><span class="line">  arr.<span class="title function_">push</span>(num);</span><br><span class="line">  arr.<span class="title function_">sort</span>(<span class="keyword">function</span>(<span class="params">a, b</span>) &#123; </span><br><span class="line">    <span class="keyword">return</span> a - b;</span><br><span class="line">   &#125;);</span><br><span class="line">  <span class="keyword">return</span> arr.<span class="title function_">indexOf</span>(num);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">where</span>([<span class="number">40</span>, <span class="number">60</span>], <span class="number">50</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="15-凯撒密码"><a href="#15-凯撒密码" class="headerlink" title="15.凯撒密码"></a>15.凯撒密码</h2><p>（让上帝的归上帝，凯撒的归凯撒）<br>下面我们来介绍风靡全球的凯撒密码Caesar cipher，又叫移位密码。<br>移位密码也就是密码中的字母会按照指定的数量来做移位。<br>一个常见的案例就是ROT13密码，字母会移位13个位置。由’A’ ↔ ‘N’, ‘B’ ↔ ‘O’，以此类推。<br>写一个ROT13函数，实现输入加密字符串，输出解密字符串。<br>所有的字母都是大写，不要转化任何非字母形式的字符(例如：空格，标点符号)，遇到这些特殊字符，跳过它们。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">rot13</span>(<span class="params">str</span>) &#123; <span class="comment">// LBH QVQ VG!</span></span><br><span class="line">  <span class="comment">// 请把你的代码写在这里</span></span><br><span class="line">    <span class="keyword">var</span> arr=str.<span class="title function_">split</span>(<span class="string">&#x27;&#x27;</span>);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.<span class="property">length</span>; i++)&#123;</span><br><span class="line">      num = arr[i].<span class="title function_">charCodeAt</span>();</span><br><span class="line">      <span class="comment">//65~(90-13)</span></span><br><span class="line">     <span class="keyword">if</span>(num &gt;= <span class="number">65</span> &amp;&amp; num &lt;= <span class="number">77</span>)&#123;</span><br><span class="line">        arr[i] = <span class="title class_">String</span>.<span class="title function_">fromCharCode</span>(arr[i].<span class="title function_">charCodeAt</span>() + <span class="number">13</span>);</span><br><span class="line">      </span><br><span class="line">       &#125;<span class="keyword">else</span> <span class="keyword">if</span>(num &gt; <span class="number">77</span> &amp;&amp; num &lt;=<span class="number">90</span>)&#123;</span><br><span class="line">         <span class="comment">//+13-90+64</span></span><br><span class="line">         arr[i] = <span class="title class_">String</span>.<span class="title function_">fromCharCode</span>(arr[i].<span class="title function_">charCodeAt</span>() -<span class="number">13</span> );</span><br><span class="line">       &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> arr.<span class="title function_">join</span>(<span class="string">&quot;&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">rot13</span>(<span class="string">&quot;SERR PBQR PNZC&quot;</span>);  <span class="comment">// 你可以修改这一行来测试你的代码</span></span><br></pre></td></tr></table></figure>
+
+
+	  </div>
+
+
+	<div class="post-footer">    
+
+  
+
+
+
+
+<span class="donate-btn iconfont icon-donate "></span>
+
+
+<div id="donate-box" class="sildeUpMin">
+
+	<span class="donate-cancel iconfont icon-cancel"></span>
+
+	<div class="donate-img-box">
+		<img id="donate-qr-wechat" class="donate-img no-gallery" src="/img/donate1.jpg"  alt="Lost">	
+		<img id="donate-qr-alipay" class="donate-img no-gallery" src="/img/donate2.jpg"  alt="Lost">	
+	</div>
+
+	<span class="donate-word">谢谢支持</span>
+
+	<div class="donate-list">
+		<span class="iconfont icon-donate-wechat"></span>
+		<span class="iconfont icon-donate-alipay"></span>
+	</div>
+
+</div>
+
+ 
+  
+	
+<script id="-mob-share" src="https://f1.webshare.mob.com/code/mob-share.js?appkey=21d601593a1de"></script>
+	
+	<span class="share-btn iconfont icon-share">
+	</span>
+
+
+	<div class="-mob-share sildeUpMin">
+		                  
+            <span class="iconfont  icon-share-qq -mob-share-qq" title="qq"></span>
+     	                  
+            <span class="iconfont  icon-share-weixin -mob-share-weixin" title="weixin"></span>
+     	                  
+            <span class="iconfont  icon-share-weibo -mob-share-weibo" title="weibo"></span>
+     	                  
+            <span class="iconfont  icon-share-douban -mob-share-douban" title="douban"></span>
+     	                  
+            <span class="iconfont  icon-share-facebook -mob-share-facebook" title="facebook"></span>
+     	                  
+            <span class="iconfont  icon-share-twitter -mob-share-twitter" title="twitter"></span>
+     	                  
+            <span class="iconfont  icon-share-google -mob-share-google" title="google"></span>
+     	   
+	</div>
+	
+
+
+
+   <nav class="post-nav">
+
+      
+       
+
+         
+
+      
+          <a href="/2018/02/25/2018-2-25%E5%BD%A9%E7%A5%A8%E6%A8%A1%E6%8B%9F%E5%99%A8/">          
+
+            <span title="彩票模拟器">  上一篇 </span>
+
+          </a>
+    
+      
+    
+      
+
+         
+
+          <a href="/2018/02/19/2018-02-19%E5%9F%BA%E6%9C%AC%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">         
+
+           <span title="基本排序算法">下一篇 </span>  
+
+          </a>
+
+      
+
+  </nav>  
+</div>
+	
+
+<div id="comment">   
+</div>
+
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine@v1.1.8-beta/dist/Valine.min.js'></script>
+
+
+<script>
+    new Valine({
+    el: '#comment',
+    notify:false, 
+    verify:false, 
+    app_id: 'ewOYpsuWTba89mW5GlnNGnqx-gzGzoHsz',
+    app_key: 'vkIuAOR4YeIygm8PxEmSheuQ',  
+    path:window.location.pathname, 
+    avatar:'mm' ,
+    guest_info:['nick','mail']
+    });
+</script>
+
+
+
+
+
+<style type="text/css">
+
+</style>
+
+
+<script>
+//set the placeholder
+$(function(){    
+
+    $('.vnick').attr('placeholder','昵称');
+    $('.veditor').attr('placeholder','说点什么吧');
+    $('.vmail').attr('placeholder','邮箱');   
+    $('.vsubmit').html('回复');   
+   
+})  
+</script>
+
+
+
+</article>
+
+
+
+<div id="toc" >		
+
+	<div class="toc-container">	
+
+	<span class="toc-contents iconfont icon-open"" onclick="change()"> 
+	<span>目录</span>
+	</span>
+
+	<ul class="toc-list"></ul>
+
+	</div>
+
+</div>
+
+
+
+<script src="/js/toc.js"></script>
+
+
+<script src="/js/post.js"></script>
+
+</section>
+
+    </div>
+
+
+    <div class="mask"> </div>
+    <div class="back-to-top iconfont icon-backtotop fadeIn"></div>
+
+    
+
+
+
+<script src="/js/search.js"></script>
+     
+          
+          <div class="search-container sildeUpMin">
+            <input type="text" placeholder="输入你想搜索的" id="search-input" class="search-input">  
+              <span class="search-cancel iconfont icon-cancel"></span>
+              <div id="search-result" class="search-result"></div>
+          </div>
+ 
+
+     <div class="mobile-menu">      
+
+      
+      <img class="mobile-menu-icon no-gallery" src= /img/favicon.ico >   
+      
+
+         
+            
+
+            <a class="mobile-menu-link" href="/">首页
+            </a>
+            
+         
+            
+
+            <a class="mobile-menu-link" href="/archives">归档
+            </a>
+            
+         
+            
+
+            <a class="mobile-menu-link" href="/categories">分类
+            </a>
+            
+         
+            
+
+            <a class="mobile-menu-link" href="/tags">标签
+            </a>
+            
+         
+            
+
+            <a class="mobile-menu-link" href="/music">音乐
+            </a>
+            
+         
+            
+
+            <a class="mobile-menu-link" href="/about">关于
+            </a>
+            
+         
+                          
+
+            <a class="mobile-menu-link mobile-menu-search" href="#">搜索 </a>                 
+            
+         
+</div>
+    
+
+<footer id="footer">
+
+   	 <div>
+	   	 
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+			     <span class="iconfont icon-pv"></span>
+			     <span id="busuanzi_value_site_pv"></span>
+
+			     <span class="iconfont icon-uv"></span>
+			     <span id="busuanzi_value_site_uv"></span>
+		 
+   	 </div>
+
+
+	 <div>
+	 	&copy;
+		2025
+
+
+	 </div>
+
+
+
+   	 <div>
+
+	 <a href="http://www.pixelcoffee9.com" target="_blank">栖木</a>
+
+	 From Alan
+
+
+	 </div>
+
+
+
+
+
+</footer>
+
+    
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?988462ad37317c8b6f18bbf2e3b5655a";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+
+
+  </body>
+  
+<script src="/js/animation.js"></script>
+
+</html>

@@ -1,0 +1,482 @@
+                                                               <!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport"content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes"/>
+  
+  
+  <title>  DCF(Discounted Cash Flow Method)推导 |   栖木</title>
+
+
+  
+    <link rel="icon" href="/img/favicon.ico">
+  
+
+
+  <!-- css -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!-- Jquery -->
+  
+<script src="//cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Add fancyBox -->
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css">
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
+
+  
+<script src="/js/gallery.js"></script>
+
+  <!-- javascript -->
+  
+<script src="/js/mobile.js"></script>
+
+  
+<script src="/js/utils.js"></script>
+
+  
+<script src="/js/script.js"></script>
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+  <body>
+    <header class="header">
+	
+  <nav class="header-nav">       
+	
+  	<span class="iconfont icon-menu mobile-toggle"></span>  
+
+    <a class="header-logo" href="/"><span>栖木</a>  
+
+    <div class="header-menu">          
+              
+            
+
+              <a class="header-menu-link" id="header-menu-home" href="/">首页</a>     
+
+            
+            
+            
+
+              <a class="header-menu-link" id="header-menu-archives" href="/archives">归档</a>     
+
+            
+            
+            
+
+              <a class="header-menu-link" id="header-menu-categories" href="/categories">分类</a>     
+
+            
+            
+            
+
+              <a class="header-menu-link" id="header-menu-tags" href="/tags">标签</a>     
+
+            
+            
+            
+
+              <a class="header-menu-link" id="header-menu-music" href="/music">音乐</a>     
+
+            
+            
+            
+
+              <a class="header-menu-link" id="header-menu-about" href="/about">关于</a>     
+
+            
+            
+            
+
+              <a class="iconfont icon-menu-search header-menu-link" id="header-menu-search"></a>
+
+            
+                
+    </div>  
+    
+  </nav>
+</header>
+
+    <div class="container">
+
+        
+
+          <section id="main">
+
+        
+
+        <article class="post">
+
+
+	<div class="post-header slideDownMin center">
+
+	<span class="post-title">	
+		DCF(Discounted Cash Flow Method)推导
+	</span>
+
+	
+	<div class="post-info">
+
+		<time class="post-time"><span class="iconfont icon-date"></span>
+		2021/07/05 	
+		</time>
+		
+					
+
+				<span class="post-meta">		
+				<span class="iconfont icon-category"></span>
+				<a class="category-link" href="/categories/%E4%BA%A4%E6%98%93/">交易</a>
+				</span>
+		
+			
+
+		
+				
+				<span class="post-meta">
+				<span class="iconfont icon-tag"></span>
+				<a class="tag-none-link" href="/tags/%E8%82%A1%E7%A5%A8%E5%AE%9A%E4%BB%B7/" rel="tag">股票定价</a> <a class="tag-none-link" href="/tags/%E9%87%91%E8%9E%8D/" rel="tag">金融</a>
+				</span>			
+			
+
+
+		
+
+		<span class="post-words"><span class="iconfont icon-words"></span>
+		1465
+		</span>		
+	
+	</div> 
+
+</div>
+
+
+	  <div class="post-content slideDownMin">
+
+		
+
+
+
+
+	  	<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>“企业的价值等于剩余存在期内自由现金流的折现”，这是很多夹头文章都会引用的巴老的一句话。投资其实就是购买在未来能获取企业收益的权利，把企业在存续期内每个财务年度的收益现金流，分别折算到今天的价值，并进行加总，就可以用来估算企业的价值，根据这个价值再以一定的打折来买入，比如打6折，就相当于估算企业价值是1元，在0.6元时买入，就有了传说中的安全边际，也即相当于在买入的那一刻就确定了未来会有收益。这需要对企业的价值有较为明确的计算，目前的很多PE&#x2F;PB指标都是静态指标或者说带有后视镜效应，需要估算企业未来的现金流折现后，得到前瞻PE&#x2F;PB才更有参考意义，所以对企业的价值估算重要性不言而喻</p>
+<h1 id="DCF-Discounted-Cash-Flow-Method-公式"><a href="#DCF-Discounted-Cash-Flow-Method-公式" class="headerlink" title="DCF(Discounted Cash Flow Method)公式"></a>DCF(Discounted Cash Flow Method)公式</h1><span id="more"></span>
+<p><img src="/2021/07/05/2021-7-5DCF(Discounted%20Cash%20Flow%20Method)%E6%8E%A8%E5%AF%BC/D.jpg" alt="栖木"><br>SCF:为股权现金流量<br>CEP:为权益资本成本<br>CEC:股权资本成本<br>PGR:永续增长率 </p>
+<h1 id="DCF推导"><a href="#DCF推导" class="headerlink" title="DCF推导"></a>DCF推导</h1><p>现金流折现模型DCF一般由两个部分组成(当然你可以任意增加第一部分不同的阶段)</p>
+<p>第一部分:<br>可以看作企业发展部分，这个时期的<code>企业增速 &gt; 折现率</code>(或者初期小于而后大于)<br>对每年的自由现金流分别进行贴现，而后相加。</p>
+<p>第二部分:永续经营部分<br>预测未来的现金流进行贴现，这个时期的<code>企业增速 &lt; 折现率</code>(如果企业增速一直大于折现率，则企业永续经营，无限膨胀，不需要估值)</p>
+<p>计算永续经营价值，需要有几个步骤：</p>
+<blockquote>
+<p>(1) 以企业当前的财务报表为基准，计算当前的自由现金流量，可以用经营活动现金流净额，减去维持现有经营所需要投入的现金。<br>(2) 第t年的自由现金流&#x3D;第t+1年的自由现金流&#x2F;(1+折现率)<br>(3) 永续价值&#x3D;自由现金流&#x2F;(折现率-预测的后续现金流稳定增长率)<br>(4) 企业总价值&#x3D;每年的自由现金流折现值+永续价值折现</p>
+</blockquote>
+<p>计算示例选择老唐的《手把手教你读财报》：假设现在是年初，预计某企业今年底可产生自由现金流10亿元，预计5年内自由现金流的年增长率为15%，其后能保持3%的永续增长。若折现率取值为10%，企业价值如下表所示：<br><img src="/2021/07/05/2021-7-5DCF(Discounted%20Cash%20Flow%20Method)%E6%8E%A8%E5%AF%BC/L.jpg" alt="栖木"><br>总体步骤就是先根据比较有把握的预计值，计算未来N年中(这里N&#x3D;5)，每年的折现值，再根据N年后的永续价值来计算永续价值的折现值，将前N年的折现值和永续价值的折现值相加，就得到企业的价值折现。这里最难理解的就是永续价值的计算，也即上表的倒数第3行的计算。<br>以下为本文核心部分，也即永续价值计算的推导过程。<br><img src="/2021/07/05/2021-7-5DCF(Discounted%20Cash%20Flow%20Method)%E6%8E%A8%E5%AF%BC/1.jpg" alt="栖木"><br>将所有第N+1年之后的价值，折算为第N+1年的折现值，这样就有<br><img src="/2021/07/05/2021-7-5DCF(Discounted%20Cash%20Flow%20Method)%E6%8E%A8%E5%AF%BC/2.jpg" alt="栖木"><br><img src="/2021/07/05/2021-7-5DCF(Discounted%20Cash%20Flow%20Method)%E6%8E%A8%E5%AF%BC/3.jpg" alt="栖木"><br><img src="/2021/07/05/2021-7-5DCF(Discounted%20Cash%20Flow%20Method)%E6%8E%A8%E5%AF%BC/4.jpg" alt="栖木"></p>
+<p>至此，推理过程完毕，这里主要思路就是把第N+1年及其之后的所有自由现金流，折现到第N+1年，定义为永续价值，然后再将其折现到当前时点。这里面有几个数据比较具有主观性，比如i、d、N的选择，都会影响最终折现值的结果，所以这种估值方式算是提供了一个框架思路，但具体的使用还是需要进行深入的分析，以确定各指标的值</p>
+<hr>
+<h1 id="DCF应用注意事项"><a href="#DCF应用注意事项" class="headerlink" title="DCF应用注意事项"></a>DCF应用注意事项</h1><ol>
+<li>企业永续经营部分，为估值重点部分。而大多数行业为周期行业，企业是否能度过行业周期寒冬是个问题。若用平均增速进行贴现或许会高估。</li>
+<li>这种方法不能反映企业灵活性所带来的收益，这个缺陷也决定了它不能适用于企业的战略领域。</li>
+<li>折现率容易收到各方面政策经济变化，较难判断，可以将额外风险率如技术风险、行业政策风险，作为风险溢价加在折现率中。DCF对企业未来收益风险的判断至关重要，当企业未来收益的风险较高时，折现率也应较高，当未来收益的风险较低时，折现率也应较低。</li>
+</ol>
+<p>文章永续部分From 雪球<a target="_blank" rel="noopener" href="https://xueqiu.com/9051523904/130502222">宽客型散户</a></p>
+
+
+	  </div>
+
+
+	<div class="post-footer">    
+
+  
+
+
+
+
+<span class="donate-btn iconfont icon-donate "></span>
+
+
+<div id="donate-box" class="sildeUpMin">
+
+	<span class="donate-cancel iconfont icon-cancel"></span>
+
+	<div class="donate-img-box">
+		<img id="donate-qr-wechat" class="donate-img no-gallery" src="/img/donate1.jpg"  alt="Lost">	
+		<img id="donate-qr-alipay" class="donate-img no-gallery" src="/img/donate2.jpg"  alt="Lost">	
+	</div>
+
+	<span class="donate-word">谢谢支持</span>
+
+	<div class="donate-list">
+		<span class="iconfont icon-donate-wechat"></span>
+		<span class="iconfont icon-donate-alipay"></span>
+	</div>
+
+</div>
+
+ 
+  
+	
+<script id="-mob-share" src="https://f1.webshare.mob.com/code/mob-share.js?appkey=21d601593a1de"></script>
+	
+	<span class="share-btn iconfont icon-share">
+	</span>
+
+
+	<div class="-mob-share sildeUpMin">
+		                  
+            <span class="iconfont  icon-share-qq -mob-share-qq" title="qq"></span>
+     	                  
+            <span class="iconfont  icon-share-weixin -mob-share-weixin" title="weixin"></span>
+     	                  
+            <span class="iconfont  icon-share-weibo -mob-share-weibo" title="weibo"></span>
+     	                  
+            <span class="iconfont  icon-share-douban -mob-share-douban" title="douban"></span>
+     	                  
+            <span class="iconfont  icon-share-facebook -mob-share-facebook" title="facebook"></span>
+     	                  
+            <span class="iconfont  icon-share-twitter -mob-share-twitter" title="twitter"></span>
+     	                  
+            <span class="iconfont  icon-share-google -mob-share-google" title="google"></span>
+     	   
+	</div>
+	
+
+
+
+   <nav class="post-nav">
+
+      
+       
+
+         
+
+      
+          <a href="/2021/07/07/2021-7-7%E7%8B%AD%E4%B9%89%E7%9B%B8%E5%AF%B9%E8%AE%BA%E3%80%81%E6%97%B6%E7%A9%BA%E9%94%99%E4%BD%8D%E5%92%8C%E5%BC%82%E5%9C%B0%E6%81%8B%EF%BC%9F/">          
+
+            <span title="狭义相对论、时空错位和异地恋？">  上一篇 </span>
+
+          </a>
+    
+      
+    
+      
+
+         
+
+          <a href="/2021/06/28/2021-6-28%E5%91%A8%E6%98%93%E5%8D%A0%E5%8D%9C%E6%A8%A1%E6%8B%9F%E5%99%A8/">         
+
+           <span title="周易占卜模拟器">下一篇 </span>  
+
+          </a>
+
+      
+
+  </nav>  
+</div>
+	
+
+<div id="comment">   
+</div>
+
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine@v1.1.8-beta/dist/Valine.min.js'></script>
+
+
+<script>
+    new Valine({
+    el: '#comment',
+    notify:false, 
+    verify:false, 
+    app_id: 'ewOYpsuWTba89mW5GlnNGnqx-gzGzoHsz',
+    app_key: 'vkIuAOR4YeIygm8PxEmSheuQ',  
+    path:window.location.pathname, 
+    avatar:'mm' ,
+    guest_info:['nick','mail']
+    });
+</script>
+
+
+
+
+
+<style type="text/css">
+
+</style>
+
+
+<script>
+//set the placeholder
+$(function(){    
+
+    $('.vnick').attr('placeholder','昵称');
+    $('.veditor').attr('placeholder','说点什么吧');
+    $('.vmail').attr('placeholder','邮箱');   
+    $('.vsubmit').html('回复');   
+   
+})  
+</script>
+
+
+
+</article>
+
+
+
+<div id="toc" >		
+
+	<div class="toc-container">	
+
+	<span class="toc-contents iconfont icon-open"" onclick="change()"> 
+	<span>目录</span>
+	</span>
+
+	<ul class="toc-list"></ul>
+
+	</div>
+
+</div>
+
+
+
+<script src="/js/toc.js"></script>
+
+
+<script src="/js/post.js"></script>
+
+</section>
+
+    </div>
+
+
+    <div class="mask"> </div>
+    <div class="back-to-top iconfont icon-backtotop fadeIn"></div>
+
+    
+
+
+
+<script src="/js/search.js"></script>
+     
+          
+          <div class="search-container sildeUpMin">
+            <input type="text" placeholder="输入你想搜索的" id="search-input" class="search-input">  
+              <span class="search-cancel iconfont icon-cancel"></span>
+              <div id="search-result" class="search-result"></div>
+          </div>
+ 
+
+     <div class="mobile-menu">      
+
+      
+      <img class="mobile-menu-icon no-gallery" src= /img/favicon.ico >   
+      
+
+         
+            
+
+            <a class="mobile-menu-link" href="/">首页
+            </a>
+            
+         
+            
+
+            <a class="mobile-menu-link" href="/archives">归档
+            </a>
+            
+         
+            
+
+            <a class="mobile-menu-link" href="/categories">分类
+            </a>
+            
+         
+            
+
+            <a class="mobile-menu-link" href="/tags">标签
+            </a>
+            
+         
+            
+
+            <a class="mobile-menu-link" href="/music">音乐
+            </a>
+            
+         
+            
+
+            <a class="mobile-menu-link" href="/about">关于
+            </a>
+            
+         
+                          
+
+            <a class="mobile-menu-link mobile-menu-search" href="#">搜索 </a>                 
+            
+         
+</div>
+    
+
+<footer id="footer">
+
+   	 <div>
+	   	 
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+			     <span class="iconfont icon-pv"></span>
+			     <span id="busuanzi_value_site_pv"></span>
+
+			     <span class="iconfont icon-uv"></span>
+			     <span id="busuanzi_value_site_uv"></span>
+		 
+   	 </div>
+
+
+	 <div>
+	 	&copy;
+		2025
+
+
+	 </div>
+
+
+
+   	 <div>
+
+	 <a href="http://www.pixelcoffee9.com" target="_blank">栖木</a>
+
+	 From Alan
+
+
+	 </div>
+
+
+
+
+
+</footer>
+
+    
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?988462ad37317c8b6f18bbf2e3b5655a";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+
+
+  </body>
+  
+<script src="/js/animation.js"></script>
+
+</html>

@@ -1,0 +1,535 @@
+                                                               <!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport"content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes"/>
+  
+  
+  <title>  基本排序算法 |   栖木</title>
+
+
+  
+    <link rel="icon" href="/img/favicon.ico">
+  
+
+
+  <!-- css -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!-- Jquery -->
+  
+<script src="//cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Add fancyBox -->
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css">
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
+
+  
+<script src="/js/gallery.js"></script>
+
+  <!-- javascript -->
+  
+<script src="/js/mobile.js"></script>
+
+  
+<script src="/js/utils.js"></script>
+
+  
+<script src="/js/script.js"></script>
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+  <body>
+    <header class="header">
+	
+  <nav class="header-nav">       
+	
+  	<span class="iconfont icon-menu mobile-toggle"></span>  
+
+    <a class="header-logo" href="/"><span>栖木</a>  
+
+    <div class="header-menu">          
+              
+            
+
+              <a class="header-menu-link" id="header-menu-home" href="/">首页</a>     
+
+            
+            
+            
+
+              <a class="header-menu-link" id="header-menu-archives" href="/archives">归档</a>     
+
+            
+            
+            
+
+              <a class="header-menu-link" id="header-menu-categories" href="/categories">分类</a>     
+
+            
+            
+            
+
+              <a class="header-menu-link" id="header-menu-tags" href="/tags">标签</a>     
+
+            
+            
+            
+
+              <a class="header-menu-link" id="header-menu-music" href="/music">音乐</a>     
+
+            
+            
+            
+
+              <a class="header-menu-link" id="header-menu-about" href="/about">关于</a>     
+
+            
+            
+            
+
+              <a class="iconfont icon-menu-search header-menu-link" id="header-menu-search"></a>
+
+            
+                
+    </div>  
+    
+  </nav>
+</header>
+
+    <div class="container">
+
+        
+
+          <section id="main">
+
+        
+
+        <article class="post">
+
+
+	<div class="post-header slideDownMin center">
+
+	<span class="post-title">	
+		基本排序算法
+	</span>
+
+	
+	<div class="post-info">
+
+		<time class="post-time"><span class="iconfont icon-date"></span>
+		2018/02/19 	
+		</time>
+		
+					
+
+				<span class="post-meta">		
+				<span class="iconfont icon-category"></span>
+				<a class="category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a>
+				</span>
+		
+			
+
+		
+				
+				<span class="post-meta">
+				<span class="iconfont icon-tag"></span>
+				<a class="tag-none-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a> <a class="tag-none-link" href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag">编程</a>
+				</span>			
+			
+
+
+		
+
+		<span class="post-words"><span class="iconfont icon-words"></span>
+		1405
+		</span>		
+	
+	</div> 
+
+</div>
+
+
+	  <div class="post-content slideDownMin">
+
+		
+
+
+
+
+	  	<p>排序算法做个复习总结</p>
+<span id="more"></span>
+<h2 id="待更新"><a href="#待更新" class="headerlink" title="(待更新)"></a>(待更新)</h2><h1 id="基本排序算法"><a href="#基本排序算法" class="headerlink" title="基本排序算法"></a>基本排序算法</h1><table>
+<thead>
+<tr>
+<th>排序法</th>
+<th>最差时间分析</th>
+<th>平均时间复杂度</th>
+<th>稳定度</th>
+<th>空间复杂度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>冒泡排序</td>
+<td>O(n2)</td>
+<td>O(n2)</td>
+<td>稳定</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>选择排序</td>
+<td>O(n2)</td>
+<td>O(n2)</td>
+<td>稳定</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>快速排序</td>
+<td>O(n2)</td>
+<td>O(n*log2n)</td>
+<td>不稳定</td>
+<td>O(log2n)~O(n)</td>
+</tr>
+<tr>
+<td>二叉树排序</td>
+<td>O(n2)</td>
+<td>O(n*log2n)</td>
+<td>不稳定</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td>插入排序</td>
+<td>O(n2)</td>
+<td>O(n2)</td>
+<td>稳定</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>堆排序</td>
+<td>O(n*log2n)</td>
+<td>O(n*log2n)</td>
+<td>不稳定</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>希尔排序</td>
+<td>O</td>
+<td>O</td>
+<td>不稳定</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>归并排序</td>
+<td>O(nlog n)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>选择排序和冒泡排序相比较,比较次数基本一致.交换次数少了.</p>
+<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">     <span class="type">int</span> nums[] = &#123; <span class="number">55</span>, <span class="number">18</span> , <span class="number">33</span> , <span class="number">22</span> , <span class="number">6</span>, <span class="number">23</span> &#125;;</span><br><span class="line">     <span class="type">int</span> numslen = <span class="built_in">sizeof</span>(nums) / <span class="built_in">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">     <span class="type">int</span> temp = <span class="number">0</span>;</span><br><span class="line">     <span class="type">int</span> min = nums[<span class="number">0</span>];</span><br><span class="line">     <span class="type">int</span> minIndex = <span class="number">0</span>;</span><br><span class="line">     <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span> ; i &lt; numslen - <span class="number">1</span>; i++)&#123;</span><br><span class="line">         <span class="keyword">for</span> (<span class="type">int</span> j = i + <span class="number">1</span>; j &lt; numslen - i; j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(nums[j] &gt; min)&#123;</span><br><span class="line">                min = nums[j];</span><br><span class="line">                minIndex = j;</span><br><span class="line">            &#125;</span><br><span class="line">         &#125;</span><br><span class="line">         <span class="comment">//少比较一次</span></span><br><span class="line">         <span class="keyword">if</span>(minIndex &gt; i)&#123;</span><br><span class="line">           temp = nums[minIndex];</span><br><span class="line">           nums[minIndex] = nums[i];</span><br><span class="line">           nums[i] = temp;</span><br><span class="line">     &#125;</span><br><span class="line">     cout &lt;&lt; <span class="string">&quot;选择排序后:&quot;</span> &lt;&lt; endl;</span><br><span class="line">     <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span> ; i &lt; numslen ; i++)&#123;</span><br><span class="line">         cout &lt;&lt; nums2[i] &lt;&lt; <span class="string">&quot;\t&quot;</span>;</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line">    <span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">     <span class="type">int</span> nums2[] = &#123; <span class="number">55</span>, <span class="number">18</span> , <span class="number">33</span> , <span class="number">22</span> , <span class="number">6</span>, <span class="number">23</span> &#125;;</span><br><span class="line">     <span class="type">int</span> numslen = <span class="built_in">sizeof</span>(nums) / <span class="built_in">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">     <span class="type">int</span> temp2 = <span class="number">0</span>;</span><br><span class="line">     <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span> ; i &lt; numslen - <span class="number">1</span>; i++)&#123;</span><br><span class="line">         <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; numslen - i - <span class="number">1</span>; j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(nums2[j] &gt; nums2[j<span class="number">+1</span>])&#123;</span><br><span class="line">                temp2 = nums2[j];</span><br><span class="line">                nums2[j] = nums2[j<span class="number">+1</span>];</span><br><span class="line">                nums2[j<span class="number">+1</span>] = temp2;</span><br><span class="line">            &#125;</span><br><span class="line">         &#125;</span><br><span class="line">     &#125;</span><br><span class="line">     cout &lt;&lt; <span class="string">&quot;冒泡排序后:&quot;</span> &lt;&lt; endl;</span><br><span class="line">     <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span> ; i &lt; numslen ; i++)&#123;</span><br><span class="line">         cout &lt;&lt; nums2[i] &lt;&lt; <span class="string">&quot;\t&quot;</span>;</span><br><span class="line">     &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+	  </div>
+
+
+	<div class="post-footer">    
+
+  
+
+
+
+
+<span class="donate-btn iconfont icon-donate "></span>
+
+
+<div id="donate-box" class="sildeUpMin">
+
+	<span class="donate-cancel iconfont icon-cancel"></span>
+
+	<div class="donate-img-box">
+		<img id="donate-qr-wechat" class="donate-img no-gallery" src="/img/donate1.jpg"  alt="Lost">	
+		<img id="donate-qr-alipay" class="donate-img no-gallery" src="/img/donate2.jpg"  alt="Lost">	
+	</div>
+
+	<span class="donate-word">谢谢支持</span>
+
+	<div class="donate-list">
+		<span class="iconfont icon-donate-wechat"></span>
+		<span class="iconfont icon-donate-alipay"></span>
+	</div>
+
+</div>
+
+ 
+  
+	
+<script id="-mob-share" src="https://f1.webshare.mob.com/code/mob-share.js?appkey=21d601593a1de"></script>
+	
+	<span class="share-btn iconfont icon-share">
+	</span>
+
+
+	<div class="-mob-share sildeUpMin">
+		                  
+            <span class="iconfont  icon-share-qq -mob-share-qq" title="qq"></span>
+     	                  
+            <span class="iconfont  icon-share-weixin -mob-share-weixin" title="weixin"></span>
+     	                  
+            <span class="iconfont  icon-share-weibo -mob-share-weibo" title="weibo"></span>
+     	                  
+            <span class="iconfont  icon-share-douban -mob-share-douban" title="douban"></span>
+     	                  
+            <span class="iconfont  icon-share-facebook -mob-share-facebook" title="facebook"></span>
+     	                  
+            <span class="iconfont  icon-share-twitter -mob-share-twitter" title="twitter"></span>
+     	                  
+            <span class="iconfont  icon-share-google -mob-share-google" title="google"></span>
+     	   
+	</div>
+	
+
+
+
+   <nav class="post-nav">
+
+      
+       
+
+         
+
+      
+          <a href="/2018/02/22/2018-02-22JavaScript%E7%AE%97%E6%B3%95%E6%8C%91%E6%88%98/">          
+
+            <span title="JavaScript算法挑战">  上一篇 </span>
+
+          </a>
+    
+      
+    
+      
+
+         
+
+          <a href="/2018/02/18/2018-2-18%E5%85%94%E5%AD%90%E5%92%8C%E8%80%81%E8%99%8E/">         
+
+           <span title="兔子和老虎">下一篇 </span>  
+
+          </a>
+
+      
+
+  </nav>  
+</div>
+	
+
+<div id="comment">   
+</div>
+
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine@v1.1.8-beta/dist/Valine.min.js'></script>
+
+
+<script>
+    new Valine({
+    el: '#comment',
+    notify:false, 
+    verify:false, 
+    app_id: 'ewOYpsuWTba89mW5GlnNGnqx-gzGzoHsz',
+    app_key: 'vkIuAOR4YeIygm8PxEmSheuQ',  
+    path:window.location.pathname, 
+    avatar:'mm' ,
+    guest_info:['nick','mail']
+    });
+</script>
+
+
+
+
+
+<style type="text/css">
+
+</style>
+
+
+<script>
+//set the placeholder
+$(function(){    
+
+    $('.vnick').attr('placeholder','昵称');
+    $('.veditor').attr('placeholder','说点什么吧');
+    $('.vmail').attr('placeholder','邮箱');   
+    $('.vsubmit').html('回复');   
+   
+})  
+</script>
+
+
+
+</article>
+
+
+
+<div id="toc" >		
+
+	<div class="toc-container">	
+
+	<span class="toc-contents iconfont icon-open"" onclick="change()"> 
+	<span>目录</span>
+	</span>
+
+	<ul class="toc-list"></ul>
+
+	</div>
+
+</div>
+
+
+
+<script src="/js/toc.js"></script>
+
+
+<script src="/js/post.js"></script>
+
+</section>
+
+    </div>
+
+
+    <div class="mask"> </div>
+    <div class="back-to-top iconfont icon-backtotop fadeIn"></div>
+
+    
+
+
+
+<script src="/js/search.js"></script>
+     
+          
+          <div class="search-container sildeUpMin">
+            <input type="text" placeholder="输入你想搜索的" id="search-input" class="search-input">  
+              <span class="search-cancel iconfont icon-cancel"></span>
+              <div id="search-result" class="search-result"></div>
+          </div>
+ 
+
+     <div class="mobile-menu">      
+
+      
+      <img class="mobile-menu-icon no-gallery" src= /img/favicon.ico >   
+      
+
+         
+            
+
+            <a class="mobile-menu-link" href="/">首页
+            </a>
+            
+         
+            
+
+            <a class="mobile-menu-link" href="/archives">归档
+            </a>
+            
+         
+            
+
+            <a class="mobile-menu-link" href="/categories">分类
+            </a>
+            
+         
+            
+
+            <a class="mobile-menu-link" href="/tags">标签
+            </a>
+            
+         
+            
+
+            <a class="mobile-menu-link" href="/music">音乐
+            </a>
+            
+         
+            
+
+            <a class="mobile-menu-link" href="/about">关于
+            </a>
+            
+         
+                          
+
+            <a class="mobile-menu-link mobile-menu-search" href="#">搜索 </a>                 
+            
+         
+</div>
+    
+
+<footer id="footer">
+
+   	 <div>
+	   	 
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+			     <span class="iconfont icon-pv"></span>
+			     <span id="busuanzi_value_site_pv"></span>
+
+			     <span class="iconfont icon-uv"></span>
+			     <span id="busuanzi_value_site_uv"></span>
+		 
+   	 </div>
+
+
+	 <div>
+	 	&copy;
+		2025
+
+
+	 </div>
+
+
+
+   	 <div>
+
+	 <a href="http://www.pixelcoffee9.com" target="_blank">栖木</a>
+
+	 From Alan
+
+
+	 </div>
+
+
+
+
+
+</footer>
+
+    
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?988462ad37317c8b6f18bbf2e3b5655a";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+
+
+  </body>
+  
+<script src="/js/animation.js"></script>
+
+</html>
